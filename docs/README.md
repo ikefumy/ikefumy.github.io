@@ -1,4 +1,4 @@
 # test
 ## これはテストです
 
-$n$ $m$ $l$
+theme: minima
