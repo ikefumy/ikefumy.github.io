@@ -1,0 +1,17 @@
+.full-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+}
+
+.my-content {
+    width: 70%;
+}
+
+.my-side {
+    width: 27%;
+    height: fit-content;
+}

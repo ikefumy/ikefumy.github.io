@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+  {%- include mathjax-v3.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          <div class="full-content">
+          <div class="toc my-side">
+            {% include toc.html html=content %}
+          </div>
+          <div class="my-content">
+          {{ content }}
+          </div>
+        </div>
+        </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
