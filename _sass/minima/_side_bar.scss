@@ -15,3 +15,22 @@
     width: 27%;
     height: fit-content;
 }
+
+@media screen and(max-width: 900px) {
+    .full-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+    
+    }
+    
+    .my-content {
+        width: 100%;
+    }
+    
+    .my-side {
+        display: none;
+    }
+}
