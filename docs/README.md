@@ -1,4 +1,0 @@
-# test
-## これはテストです
-
-theme: minima
