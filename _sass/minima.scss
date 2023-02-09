@@ -21,7 +21,7 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    1200px !default;
+$content-width:    1400px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
@@ -49,7 +49,7 @@ $on-laptop:        800px !default;
   "minima/layout",
   // "minima/syntax-highlighting",
   "minima/toc",
-  "minima/side_bar"
+  "minima/my_content"
 ;
 // スクロールバーによるがたつきを防止
 body {
