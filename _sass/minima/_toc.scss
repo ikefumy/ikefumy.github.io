@@ -13,3 +13,10 @@
     color: black;
     text-decoration:underline;
 }
+
+@media screen and(max-width: 900px) {
+    .toc {
+        position: inherit;
+        margin-bottom: 2em;
+    }
+}
