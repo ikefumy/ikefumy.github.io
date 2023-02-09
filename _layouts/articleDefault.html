@@ -4,17 +4,17 @@
   {%- include head.html -%}
   {%- include mathjax-v3.html -%}
 
-  <body class="line-numbers match-braces" data-label="code-select">
+  <body class="line-numbers match-braces">
 
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
         <div class="wrapper">
           <div class="full-content">
-          <div class="toc my-side">
+          <div class="toc side-content">
             {% include toc.html html=content %}
           </div>
-          <div class="my-content">
+          <div class="main-content">
           {{ content }}
           </div>
         </div>
