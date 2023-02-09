@@ -1,0 +1,50 @@
+body {
+    background-color: whitesmoke;
+}
+
+header[role=banner] {
+    background-color: lightgray;
+}
+
+.full-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.main-content {
+    width: 70%;
+    padding: 3ex;
+    border-radius: 10px 10px 10px 10px;
+    background-color: white;
+}
+
+.side-content {
+    width: 23%;
+    height: fit-content;
+    border-radius: 10px 10px 10px 10px;
+    justify-content: flex-start;
+}
+
+@media screen and(max-width: 900px) {
+    .full-content {
+        width: 100%;
+        display: flex;
+        flex-direction: center;
+        flex-wrap: wrap;
+    
+    }
+    
+    .main-content {
+        border-radius: 10px 10px 10px 10px;
+        width: 100%;
+    }
+    
+    .side-content {
+        width: 0%;
+        border-radius: 10px 10px 10px 10px;
+        display: none;
+    }
+}
