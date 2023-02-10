@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main  # Set a branch that will trigger a deployment
-      - hugo-vesion
+      - hugo-version
   pull_request:
 jobs:
   deploy:
