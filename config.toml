@@ -1,7 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://ikefumy.github.io/'
 languageCode = 'en-us'
 title = "ikefumy's memo"
 theme='hugo-theme-stack'
-
-
-custom_css = ["css/prism.css"]
