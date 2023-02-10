@@ -4,8 +4,9 @@ on:
   push:
     branches:
       - main  # Set a branch that will trigger a deployment
-      - hugo-version
   pull_request:
+    branches:
+      - hugo-version
 jobs:
   deploy:
     runs-on: ubuntu-22.04
@@ -26,7 +27,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        # if: github.ref == 'refs/heads/main' main以外でも動いてほしいので除外
+        if: github.ref == 'refs/heads/hugo-version' main以外でも動いてほしいので除外
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
