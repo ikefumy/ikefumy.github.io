@@ -7,8 +7,11 @@
 >このページ&lt;/a>を参考に&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yml" data-lang="yml">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">permissions&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">contents&lt;/span>: &lt;span style="color:#ae81ff">write&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>を追記したら動きました。&lt;/p>
-&lt;h2 id="ブログの構成">ブログの構成&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>を追記したら動きました。また、&lt;code>resources&lt;/code>ディレクトリはキャッシュを貯めている場所らしいので消して良いと思い消したところ、GitHub Actionsのbuildでエラーが発生しました。エラーを読むと「&lt;code>sass&lt;/code>ファイルはextendバージョンがいるよ」と書いてあったので&lt;code>gh-pages.yml&lt;/code>を以下のように書き換えました。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yml" data-lang="yml">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">with&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">hugo-version&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;latest&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">extended&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ブログの構成">ブログの構成&lt;/h2>
 &lt;p>ここらへんで「jekyllである程度の物作れたのにHUGOを一からやり直すのだるくね？」という気分になってきました。KaTeXを使うために頑張ります。jekyllのままでも使えるんですが、回りくどい方法になりそうです。なんなら自分でGitHub Actionsを作って変換されないようにすればいいんじゃないかという気がしてきたんですが、できるかわからないのでとりあえずHUGOでやっています。&lt;/p>
 &lt;p>好きなテーマを選び、それを改造していくという手段を取ります。あとPrism.jsをいれてそれを改造します。そのままでもいい気がしてきましたが、改造します。&lt;/p>
 &lt;h3 id="テーマ">テーマ&lt;/h3>
@@ -16,12 +19,12 @@
 >テーマ一覧&lt;/a>を見ます。ここから良さげなものを探し出して改造するんですが、レスポンシブデザインに対応しててほしいのでタグで絞り込みます。今回は&lt;a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/" target="_blank" rel="noopener"
 >Stack&lt;/a>というテーマをベースにデザインすることにしました。&lt;/p>
 &lt;p>ライセンスを見るとGPL-3.0-onlyとかいてあり、知らなかったので調べました。分かりませんでした。いかがでしたか？&lt;/p>
-&lt;p>流石に勝手に改造するのはやばそうなのでもうちょっと頑張って調べた結果、改造はOK。再配布もOK。しかし再配布する場合はその再配布物もGPL-3.0ライセンスを使用する必要があるっぽいことが分かりました。ChatGPTもそういっていたので大丈夫だと思います。また、先ほどのサイトの&lt;/p>
+&lt;p>流石に勝手に改造するのはやばそうなのでもうちょっと頑張って調べた結果、改造はOK。再配布もOK。しかし再配布する場合はその再配布物もGPL-3.0ライセンスを使用する必要があるっぽいことが分かりました。ChatGPTもそういっていたので大丈夫だと思います。また、先ほどのサイトに&lt;/p>
 &lt;blockquote>
 &lt;p>Please do not remove the “Theme Stack designed by Jimmy” text and link.&lt;/p>
 &lt;/blockquote>
-&lt;p>と書いてありました。フッターに書いてあるので、これを消さないようにしておけば良さそうです。&lt;del>quick startのanankeと同じ要領で配置したりymlを書き換えたりします。&lt;/del> そのままsubmobule化すると&lt;code>hugo-theme-stack&lt;/code>をいじったときに本家にpushする羽目になるので、 &lt;strong>cloneするかforkしてforkしたものをsubmoduleしてください。&lt;/strong> 僕はsubmoduleが何かわからずいじっていたせいで面倒なことになりました。本家から&lt;code>submodule&lt;/code>して差分を一番外側のディレクトリに配置する方がいい気がするんですが、面倒でforkしてしまいました。&lt;/p>
-&lt;p>さて、いざ表示したらフォントが中国語っぽくなってしまいました。&lt;/p>
+&lt;p>と書いてありました。フッターに書いてあるので、これを消さないようにしておけば良さそうです。&lt;del>quick startのanankeと同じ要領で配置したりymlを書き換えたりします。&lt;/del> そのままsubmobule化すると&lt;code>hugo-theme-stack&lt;/code>をいじったときに本家にpushする羽目になるので、 &lt;strong>cloneするかforkしてforkしたものをsubmoduleしてください。&lt;/strong> 僕はsubmoduleが何かわからずいじっていたせいで面倒なことになりました。本家から&lt;code>submodule&lt;/code>して差分を&lt;code>root&lt;/code>ディレクトリに配置する方がいい気がするんですが、面倒なのでforkしてしまいました。&lt;/p>
+&lt;p>さて、いざページを表示したらフォントが中国語っぽくなってしまいました。&lt;/p>
 &lt;p>&lt;img src="http://example.org/post/about/my-site.png"
 width="363"
 height="259"
@@ -32,7 +35,7 @@ class="gallery-image"
 data-flex-grow="140"
 data-flex-basis="336px"
 >&lt;/p>
-&lt;p>デベロッパーツールで文字をクリックして元のfont-familyを探すと、以下のような部分を発見しました。&lt;/p>
+&lt;p>直します。デベロッパーツールで文字をクリックして元のfont-familyを探すと、以下のような部分を発見しました。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-css" data-lang="css">&lt;span style="display:flex;">&lt;span>:&lt;span style="color:#a6e22e">root&lt;/span> {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --sys-font-family: &lt;span style="color:#f92672">-&lt;/span>apple-system, BlinkMacSystemFont, &lt;span style="color:#e6db74">&amp;#34;Segoe UI&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Droid Sans&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Helvetica Neue&amp;#34;&lt;/span>;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --zh-font-family: &lt;span style="color:#e6db74">&amp;#34;PingFang SC&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Hiragino Sans GB&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Droid Sans Fallback&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Microsoft YaHei&amp;#34;&lt;/span>;
