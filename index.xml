@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My New Hugo Site</title><link>http://example.org/</link><description>Recent content on My New Hugo Site</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Feb 2023 17:56:33 +0900</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Test</title><link>http://example.org/post/test/</link><pubDate>Fri, 10 Feb 2023 17:56:33 +0900</pubDate><guid>http://example.org/post/test/</guid><description>&lt;h1 id="このブログについて">このブログについて&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ikefumy's memo</title><link>http://example.org/</link><description>Recent content on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Feb 2023 17:56:33 +0900</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml"/><item><title>ブログの概要</title><link>http://example.org/post/about/</link><pubDate>Fri, 10 Feb 2023 17:56:33 +0900</pubDate><guid>http://example.org/post/about/</guid><description>&lt;h1 id="このブログについて">このブログについて&lt;/h1>
 &lt;h2 id="概要">概要&lt;/h2>
 &lt;p>HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作っていたんですが、MathJaxが強制だったり(KaTeXを使いたい)選べるテーマが少なかったりする部分がイマイチだなぁと感じてました。あとこれは僕の技術力不足だと思うのですがWSL2を用いてプレビューしてたらminima以外のテーマを使うとエラーを吐かれたのでとりあえずminimaを使ってました。プラグイン周りの調べ物をしてたら「HUGO+GitHub Pagesでホームページを作った」みたいな記事を見つけ、「HUGO使えるの！？」となり、乗り換える事にしました。&lt;/p>
 &lt;h2 id="hugogithub-pagesのやり方">HUGO+GitHub Pagesのやり方&lt;/h2>
@@ -13,18 +13,19 @@
 &lt;p>好きなテーマを選び、それを改造していくという手段を取ります。あとPrism.jsをいれてそれを改造します。そのままでもいい気がしてきましたが、改造します。&lt;/p>
 &lt;h3 id="テーマ">テーマ&lt;/h3>
 &lt;p>まず&lt;a class="link" href="https://themes.gohugo.io/" target="_blank" rel="noopener"
->テーマ一覧&lt;/a>を見ます。個々から良さげなものを探し出して改造するんですが、レスポンシブデザインに対応しててほしいのでタグで絞り込みます。今回は&lt;a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/" target="_blank" rel="noopener"
+>テーマ一覧&lt;/a>を見ます。ここから良さげなものを探し出して改造するんですが、レスポンシブデザインに対応しててほしいのでタグで絞り込みます。今回は&lt;a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/" target="_blank" rel="noopener"
 >Stack&lt;/a>というテーマをベースにデザインすることにしました。&lt;/p>
 &lt;p>ライセンスを見るとGPL-3.0-onlyとかいてあり、知らなかったので調べました。分かりませんでした。いかがでしたか？&lt;/p>
 &lt;p>流石に勝手に改造するのはやばそうなのでもうちょっと頑張って調べた結果、改造はOK。再配布もOK。しかし再配布する場合はその再配布物もGPL-3.0ライセンスを使用する必要があるっぽいことが分かりました。ChatGPTもそういっていたので大丈夫だと思います。また、先ほどのサイトの&lt;/p>
 &lt;blockquote>
 &lt;p>Please do not remove the “Theme Stack designed by Jimmy” text and link.&lt;/p>
 &lt;/blockquote>
-&lt;p>と書いてありました。フッターに書いてあるので、これを消さないようにしておけば良さそうです。quick startのanankeと同じ要領で配置したりymlを書き換えたりします。いざ表示したらフォントが中国語っぽくなってしまいました。&lt;/p>
-&lt;p>&lt;img src="http://example.org/post/test/my-site.png"
+&lt;p>と書いてありました。フッターに書いてあるので、これを消さないようにしておけば良さそうです。&lt;del>quick startのanankeと同じ要領で配置したりymlを書き換えたりします。&lt;/del> そのままsubmobule化すると&lt;code>hugo-theme-stack&lt;/code>をいじったときに本家にpushする羽目になるので、 &lt;strong>cloneするかforkしてforkしたものをsubmoduleしてください。&lt;/strong> 僕はsubmoduleが何かわからずいじっていたせいで面倒なことになりました。本家から&lt;code>submodule&lt;/code>して差分を一番外側のディレクトリに配置する方がいい気がするんですが、面倒でforkしてしまいました。&lt;/p>
+&lt;p>さて、いざ表示したらフォントが中国語っぽくなってしまいました。&lt;/p>
+&lt;p>&lt;img src="http://example.org/post/about/my-site.png"
 width="363"
 height="259"
-srcset="http://example.org/post/test/my-site_hu718726cad788e00b79fdf8502f82ee2f_17544_480x0_resize_box_3.png 480w, http://example.org/post/test/my-site_hu718726cad788e00b79fdf8502f82ee2f_17544_1024x0_resize_box_3.png 1024w"
+srcset="http://example.org/post/about/my-site_hu718726cad788e00b79fdf8502f82ee2f_17544_480x0_resize_box_3.png 480w, http://example.org/post/about/my-site_hu718726cad788e00b79fdf8502f82ee2f_17544_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="こんな感じ"
 class="gallery-image"
@@ -49,4 +50,7 @@ data-flex-basis="336px"
 &lt;/code>&lt;/pre>&lt;p>これで文字はひとまず直りました。良さげなフォントがあったら適宜弄りたいと思います。&lt;code>config.toml&lt;/code>でフォントを指定したCSSを読み込むなどの方法もあるらしいのですが、いたるところで&lt;code>--base-font-family&lt;/code>が使われていたので、ここを書き換えるのが一番手っ取り早いんじゃないかと思いました。&lt;/p>
 &lt;h3 id="prismjs">Prism.js&lt;/h3>
 &lt;p>&lt;a class="link" href="http://blog.syati.info/post/add_syntaxhighlighter_to_hugo/" target="_blank" rel="noopener"
->このブログ&lt;/a>を参考にしました。&lt;/p></description></item></channel></rss>
+>このブログ&lt;/a>を参考にしました。ただしこのテーマは&lt;code>themes\hugo-theme-stack\layouts\partials&lt;/code>ディレクトリにfooterやheaderの&lt;code>html&lt;/code>ファイルが置いてあるのですが、そこに&lt;code>custom.html&lt;/code>というファイルがあって、これが読み込まれるようになっているので、ここに追記します。また&lt;code>static&lt;/code>ディレクトリに配置した要素は&lt;code>hugo&lt;/code>コマンドを打つと中身をルートにそのまま移すので&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">script&lt;/span> &lt;span style="color:#a6e22e">src&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;/js/prism.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#f92672">script&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">link&lt;/span> &lt;span style="color:#a6e22e">href&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;/css/prism.css&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">media&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;screen, projection&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">rel&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;text/css&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>としても良く、僕はこちらを追記しました。&lt;/p></description></item></channel></rss>
