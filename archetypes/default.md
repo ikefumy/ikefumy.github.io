@@ -3,4 +3,4 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
 ---
-テスト
+テスト2
