@@ -1,5 +1,5 @@
 ---
-title: "Test"
+title: "ブログの概要"
 description: 
 date: 2023-02-10T17:56:33+09:00
 image: 
@@ -32,7 +32,7 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
 
 ### テーマ
 
-まず[テーマ一覧](https://themes.gohugo.io/)を見ます。個々から良さげなものを探し出して改造するんですが、レスポンシブデザインに対応しててほしいのでタグで絞り込みます。今回は[Stack](https://themes.gohugo.io/themes/hugo-theme-stack/)というテーマをベースにデザインすることにしました。
+まず[テーマ一覧](https://themes.gohugo.io/)を見ます。ここから良さげなものを探し出して改造するんですが、レスポンシブデザインに対応しててほしいのでタグで絞り込みます。今回は[Stack](https://themes.gohugo.io/themes/hugo-theme-stack/)というテーマをベースにデザインすることにしました。
 
 ライセンスを見るとGPL-3.0-onlyとかいてあり、知らなかったので調べました。分かりませんでした。いかがでしたか？
 
@@ -40,7 +40,9 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
 
 > Please do not remove the “Theme Stack designed by Jimmy” text and link.
 
-と書いてありました。フッターに書いてあるので、これを消さないようにしておけば良さそうです。quick startのanankeと同じ要領で配置したりymlを書き換えたりします。いざ表示したらフォントが中国語っぽくなってしまいました。
+と書いてありました。フッターに書いてあるので、これを消さないようにしておけば良さそうです。~~quick startのanankeと同じ要領で配置したりymlを書き換えたりします。~~ そのままsubmobule化すると`hugo-theme-stack`をいじったときに本家にpushする羽目になるので、 **cloneするかforkしてforkしたものをsubmoduleしてください。** 僕はsubmoduleが何かわからずいじっていたせいで面倒なことになりました。本家から`submodule`して差分を一番外側のディレクトリに配置する方がいい気がするんですが、面倒でforkしてしまいました。
+
+さて、いざ表示したらフォントが中国語っぽくなってしまいました。
 
 ![こんな感じ](my-site.png)
 
@@ -69,4 +71,11 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
 
 ### Prism.js
 
-[このブログ](http://blog.syati.info/post/add_syntaxhighlighter_to_hugo/)を参考にしました。
+[このブログ](http://blog.syati.info/post/add_syntaxhighlighter_to_hugo/)を参考にしました。ただしこのテーマは`themes\hugo-theme-stack\layouts\partials`ディレクトリにfooterやheaderの`html`ファイルが置いてあるのですが、そこに`custom.html`というファイルがあって、これが読み込まれるようになっているので、ここに追記します。また`static`ディレクトリに配置した要素は`hugo`コマンドを打つと中身をルートにそのまま移すので
+```html
+<script src="/js/prism.js"></script>
+```
+```html
+<link href="/css/prism.css" media="screen, projection" rel="stylesheet" type="text/css">
+```
+としても良く、僕はこちらを追記しました。
