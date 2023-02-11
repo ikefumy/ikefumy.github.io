@@ -1,0 +1,19 @@
+---
+title: "ブログの構成"
+description: 
+date: 2023-02-11T11:18:36+09:00
+image: 
+math: 
+license: 
+hidden: false
+comments: true
+draft: false
+---
+
+
+== 概要
+
+HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作っていたんですが、MathJaxが強制だったり(KaTeXを使いたい)選べるテーマが少なかったりする部分がイマイチだなぁと感じてました。あとこれは僕の技術力不足だと思うのですがWSL2を用いてプレビューしてたらminima以外のテーマを使うとエラーを吐かれたのでとりあえずminimaを使ってました。プラグイン周りの調べ物をしてたら「HUGO+GitHub Pagesでホームページを作った」みたいな記事を見つけ、「HUGO使えるの！？」となり、乗り換える事にしました。
+
+== Hugo+GitHub Pagesのやり方
+https://gohugo.io/hosting-and-deployment/hosting-on-github/[Host on GitHub | Hugo]

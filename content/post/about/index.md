@@ -1,16 +1,14 @@
 ---
-title: "ブログの概要"
+title: "ブログの構成"
 description: 
 date: 2023-02-10T17:56:33+09:00
 image: 
-math: 
+math: true
 license: 
 hidden: false
 comments: true
 draft: false
 ---
-
-# このブログについて
 
 ## 概要
 
@@ -83,4 +81,12 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
 ```html
 <link href="/css/prism.css" media="screen, projection" rel="stylesheet" type="text/css">
 ```
-としても良く、僕はこちらを追記しました。
+としても良く、僕はこちらを追記しました。あと見た目をいろいろ弄りました。
+
+### KaTeX
+
+このテーマはデフォルトで $\KaTeX$ 使ってるので問題ないです。
+
+### Ascii Doc
+
+こういう便利なものがあるらしくて、markdownくらい書きやすく、markdownより表現力が高いらしいです。まず[Asciidocによる文書作成環境の構築 [AFFRIT Portal]](https://itcweb.cc.affrc.go.jp/affrit/documents/guide/asciidoc/start)に従いAscii
