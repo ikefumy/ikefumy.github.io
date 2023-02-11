@@ -24,6 +24,8 @@ jobs:
 
       - name: Setup asciidoctor
         uses: Analog-inc/asciidoctor-action@master
+        with:
+          shellcommand:
 
       - name: Build
         run: hugo --minify
