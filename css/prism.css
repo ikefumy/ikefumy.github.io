@@ -163,6 +163,7 @@ pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
 pre[class*="language-"].line-numbers {
   position: relative;
   padding-left: 3.8em;
+  margin: 0;
   counter-reset: linenumber;
 }
 pre[class*="language-"].line-numbers > code {
@@ -201,7 +202,7 @@ div.code-toolbar {
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-    margin: 0.5ex 0;
+    margin: 0.5em 0;
     border-radius: 7px 7px 7px 7px;
     overflow: hidden;
   }
@@ -262,16 +263,23 @@ div.code-toolbar {
   }
 
   div.code-toolbar > .toolbar > .toolbar-item > button {
-    color: #000000;
-    font-size: 0.8em;
+    height: fit-content;
+    color: white;
+    margin: auto;
+    font-size: 0.1em;
     background: #dadada;
     background: rgba(224, 224, 224, 0.4);
     padding: 0 0.4em;
     border-radius: 10px;
   }
 
+  div.code-toolbar > .toolbar > .toolbar-item > button > span {
+    display: inline-block;
+    margin: 1em 10em;
+  }
+
   div.code-toolbar > .toolbar > .toolbar-item > button:hover {
-    color: white;
+    color: black;
   }
 
 span.inline-color-wrapper {
