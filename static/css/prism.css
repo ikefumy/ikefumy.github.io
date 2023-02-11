@@ -23,7 +23,6 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   padding: 1em;
   margin: 0 0 0.5em 0;
-  
   overflow: auto;
 }
 :not(pre) > code[class*="language-"] {
@@ -202,12 +201,13 @@ div.code-toolbar {
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: baseline;
+    margin: 0.5ex 0;
+    border-radius: 7px 7px 7px 7px;
+    overflow: hidden;
   }
   div.code-toolbar > .toolbar {
+    display: flex;
     position: relative;
-    margin: 0.5em 0 0 0;
-    border-radius: 7px 7px 0 0;
     background-color: #616161;
     opacity: 1;
   }
@@ -218,7 +218,6 @@ div.code-toolbar {
     opacity: 1;
   }
   div.code-toolbar > .toolbar > .toolbar-item {
-    float: right;
     display: inline-flex;
     /* padding: 0.5em 0.2em; */
   }
@@ -238,24 +237,43 @@ div.code-toolbar {
     -ms-user-select: none;
   }
   div.code-toolbar > .toolbar > .toolbar-item > a,
-  div.code-toolbar > .toolbar > .toolbar-item > button,
   div.code-toolbar > .toolbar > .toolbar-item > span {
+    height: auto;
     color: #bbb;
     font-size: 0.8em;
     padding: 0 0.5em;
     background: #f5f2f0;
     background: rgba(224, 224, 224, 0.2);
-    border-radius: 0.5em;
+    /* border-radius: 0.5em; */
   }
   div.code-toolbar > .toolbar > .toolbar-item > a:focus,
   div.code-toolbar > .toolbar > .toolbar-item > a:hover,
   div.code-toolbar > .toolbar > .toolbar-item > button:focus,
-  div.code-toolbar > .toolbar > .toolbar-item > button:hover,
-  div.code-toolbar > .toolbar > .toolbar-item > span:focus,
-  div.code-toolbar > .toolbar > .toolbar-item > span:hover {
+  div.code-toolbar > .toolbar > .toolbar-item > button:hover {
     color: inherit;
-    text-decoration: none;
-  }  
+  }
+  div.toolbar > .toolbar-item > span.language-name {
+    padding: 0.1em 1em;
+  }
+
+  div.toolbar > div.copy-to-clipboard-button {
+    margin-left: auto;
+    padding: 0.1em 1em;
+  }
+
+  div.code-toolbar > .toolbar > .toolbar-item > button {
+    color: #000000;
+    font-size: 0.8em;
+    background: #dadada;
+    background: rgba(224, 224, 224, 0.4);
+    padding: 0 0.4em;
+    border-radius: 10px;
+  }
+
+  div.code-toolbar > .toolbar > .toolbar-item > button:hover {
+    color: white;
+  }
+
 span.inline-color-wrapper {
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDIiPjxwYXRoIGZpbGw9ImdyYXkiIGQ9Ik0wIDBoMnYySDB6Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMXYxSDB6TTEgMWgxdjFIMXoiLz48L3N2Zz4=);
   background-position: center;
@@ -458,4 +476,8 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 .token.treeview-part .entry-name.ext-ppt:before,
 .token.treeview-part .entry-name.ext-pptx:before {
   content: "\ea0b";
+}
+
+code[class*="language="] {
+  height: 0%;
 }
