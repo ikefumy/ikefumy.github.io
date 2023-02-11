@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # Set a branch that will trigger a deployment
+      - design-code-block
 jobs:
   deploy:
     runs-on: ubuntu-22.04
