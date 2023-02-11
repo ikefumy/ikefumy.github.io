@@ -79,7 +79,7 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
 ```html
 <link href="/css/prism.css" media="screen, projection" rel="stylesheet" type="text/css">
 ```
-としても良く、僕はこちらを追記しました。あと見た目をいろいろ弄りました。
+としても良く、僕はこちらを追記しました。あと見た目をいろいろ弄りました。なんかコードブロックに必ず無駄な一行が挿入されているんですが、理由が分かりません。分かる人がいたら教えてください。
 
 ### KaTeX
 
