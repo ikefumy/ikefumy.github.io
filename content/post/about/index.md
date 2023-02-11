@@ -1,23 +1,21 @@
 ---
-title: "ブログの概要"
+title: "ブログの構成(Markdown ver)"
 description: 
 date: 2023-02-10T17:56:33+09:00
 image: 
-math: 
+math: true
 license: 
 hidden: false
 comments: true
 draft: false
 ---
 
-# このブログについて
-
 ## 概要
 
 HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作っていたんですが、MathJaxが強制だったり(KaTeXを使いたい)選べるテーマが少なかったりする部分がイマイチだなぁと感じてました。あとこれは僕の技術力不足だと思うのですがWSL2を用いてプレビューしてたらminima以外のテーマを使うとエラーを吐かれたのでとりあえずminimaを使ってました。プラグイン周りの調べ物をしてたら「HUGO+GitHub Pagesでホームページを作った」みたいな記事を見つけ、「HUGO使えるの！？」となり、乗り換える事にしました。
 
 ## HUGO+GitHub Pagesのやり方
-[HUGO公式の案内](https://gohugo.io/hosting-and-deployment/hosting-on-github/)があるので、それに従って環境構築したりGitHub Actionsの設定をしたりしました。ただ、`.github/workflows/gh-pages.yml`をそのままコピペしたらDeployのステップでpermission deniedと言われたので、[このページ](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token)を参考に
+[Host on GitHub | Hugo](https://gohugo.io/hosting-and-deployment/hosting-on-github/)に案内があるので、それに従って環境構築したりGitHub Actionsの設定をしたりしました。ただ、`.github/workflows/gh-pages.yml`をそのままコピペしたらDeployのステップでpermission deniedと言われたので、[このページ](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token)を参考に
 ```yml
     permissions:
       contents: write
@@ -63,12 +61,10 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
 ```
 
 これを書き換えれば良さそなので`grep`でしらべたところ、`./themes/hugo-theme-stack/assets/scss/variables.scss`にあったのでこれを以下のように書き換えました。
-```diff-css
+```css
 :root {
     --sys-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue";
--    --zh-font-family: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
--    --base-font-family: "Lato", var(--sys-font-family), var(--zh-font-family), sans-serif;
-+    --base-font-family: "Lato", var(--sys-font-family), sans-serif;
+    --base-font-family: "Lato", var(--sys-font-family), sans-serif;
     --code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 ```
@@ -83,4 +79,24 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
 ```html
 <link href="/css/prism.css" media="screen, projection" rel="stylesheet" type="text/css">
 ```
-としても良く、僕はこちらを追記しました。
+としても良く、僕はこちらを追記しました。あと見た目をいろいろ弄りました。
+
+### KaTeX
+
+このテーマはデフォルトで $\KaTeX$ 使ってるので問題ないです。
+
+### Ascii Doc
+
+こういう便利なものがあるらしくて、markdownくらい書きやすく、markdownより表現力が高いらしいです。まず[Asciidocによる文書作成環境の構築 [AFFRIT Portal]](https://itcweb.cc.affrc.go.jp/affrit/documents/guide/asciidoc/start)に従いAsciidoctorを入れてローカルに環境を構築します。あと`archetypes`ディレクトリにテンプレートを登録しとくと`hugo new ...`で新しく記事を作った時にコピーされるので設定します。Hugoは.adocファイルを扱うためにコマンドラインでasciidoctorを使うのですが、GitHub Actionsの環境にはこれが無いので、`gh-pages.yml`に以下のように追記します。
+```yml
+      - name: Install asciidoctor
+        run: sudo apt-get install -y asciidoctor
+```
+これで使えるようになりました。しかしHugoでは属性が使えないのであんまり便利じゃないかもしれません...。ちょっと使ってみた感じでは「俺はMarkdownで十分だな...」と感じました。以下のような書き方で
+```adoc
+[NOTE]
+====
+NOTEです。ほかにもいろいろ出来ます。ここら辺をうまく使えば大分綺麗になりそうです。
+====
+```
+で`<div class="admonitionblock note">`で囲まれたブロックを作れるので、これをCSSとかでうまく弄れば綺麗に使えそうです。今は使う機会がないので、使う時に整えます。

@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # Set a branch that will trigger a deployment
+      - design-code-block
 jobs:
   deploy:
     runs-on: ubuntu-22.04
@@ -20,6 +21,9 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
+
+      - name: Install asciidoctor
+        run: sudo apt-get install -y asciidoctor
 
       - name: Build
         run: hugo --minify

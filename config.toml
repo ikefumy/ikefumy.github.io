@@ -1,7 +1,0 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = "ikefumy's memo"
-theme='hugo-theme-stack'
-
-
-custom_css = ["css/prism.css"]
