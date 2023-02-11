@@ -1,9 +1,10 @@
 ---
-title: "ブログの構成(Markdown ver)"
+title: "競プロ純粋培養が全力でブログを作る"
 description: 
 date: 2023-02-10T17:56:33+09:00
 image: 
 math: true
+toc: true
 license: 
 hidden: false
 comments: true
@@ -12,9 +13,9 @@ draft: false
 
 ## 概要
 
-HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作っていたんですが、MathJaxが強制だったり(KaTeXを使いたい)選べるテーマが少なかったりする部分がイマイチだなぁと感じてました。あとこれは僕の技術力不足だと思うのですがWSL2を用いてプレビューしてたらminima以外のテーマを使うとエラーを吐かれたのでとりあえずminimaを使ってました。プラグイン周りの調べ物をしてたら「HUGO+GitHub Pagesでホームページを作った」みたいな記事を見つけ、「HUGO使えるの！？」となり、乗り換える事にしました。
+ikefumyと申します。競プロばかりやっていて、GitHubとかホームページとかよくわかりません！って感じだったんですが、GitHub Pagesというものを最近知って、「これ利用すれば簡単にホームページを作れそうだな」と思い、HugoとGitHub Pagesを利用して作りました。最初はjekyllで作っていたんですが、MathJaxが強制だったり(KaTeXを使いたい)選べるテーマが少なかったりする部分がイマイチだなぁと感じてました。あとこれは僕の技術力不足だと思うのですがWSL2を用いてプレビューする際、minima以外のテーマを使うとエラーを吐かれたのでとりあえずminimaを使ってました。jekyllの`config.yaml`に追加するプラグイン周りの調べ物をしてたら「Hugo+GitHub Pagesでホームページを作った」みたいな記事を見つけ、「Hugo使えるの！？」となり、乗り換える事にしました。
 
-## HUGO+GitHub Pagesのやり方
+## Hugo+GitHub Pagesのやり方
 [Host on GitHub | Hugo](https://gohugo.io/hosting-and-deployment/hosting-on-github/)に案内があるので、それに従って環境構築したりGitHub Actionsの設定をしたりしました。ただ、`.github/workflows/gh-pages.yml`をそのままコピペしたらDeployのステップでpermission deniedと言われたので、[このページ](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token)を参考に
 ```yml
     permissions:
@@ -29,7 +30,7 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
 
 ## ブログの構成
 
-ここらへんで「jekyllである程度の物作れたのにHUGOを一からやり直すのだるくね？」という気分になってきました。KaTeXを使うために頑張ります。jekyllのままでも使えるんですが、回りくどい方法になりそうです。なんなら自分でGitHub Actionsを作って変換されないようにすればいいんじゃないかという気がしてきたんですが、できるかわからないのでとりあえずHUGOでやっています。
+ここらへんで「jekyllである程度の物作れたのにHugoを一からやり直すのだるくね？」という気分になってきました。KaTeXを使うために頑張ります。jekyllのままでも使えるんですが、回りくどい方法になりそうです。なんなら自分でGitHub Actionsを作って変換されないようにすればいいんじゃないかという気がしてきたんですが、できるかわからないのでとりあえずHugoでやっています。
 
 好きなテーマを選び、それを改造していくという手段を取ります。あとPrism.jsをいれてそれを改造します。そのままでもいい気がしてきましたが、改造します。
 
@@ -68,7 +69,7 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
     --code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 ```
-これで文字はひとまず直りました。良さげなフォントを探してみたら`Noto Sans JP`というフォントがあったので使おうとしたんですが、ほかのフォントもfont-familyに指定している場合は別のフォントが使用されてしまいました。なので`Noto Sans JP`以外消しました。Webフォントとして扱っているのでネットにつながらない場合は何か別のフォントが使われるんだと思いますが、よくわかりません。あとコードブロック内が等幅フォントになっていないっぽいんですがよくわかりません。
+これで文字はひとまず直りました。良さげなフォントを探してみたら`Noto Sans JP`というフォントがあったので使おうとしたんですが、ほかのフォントもfont-familyに指定している場合は別のフォントが使用されてしまいました。なので`Noto Sans JP`以外消しました。多分あまり良くないことをしているんですが、`Noto Sans JP`を使いたい欲が勝ちました。Webフォントとして扱っているのでネットにつながらない場合は何か別のフォントが使われるんだと思いますが、よくわかりません。
 
 ### Prism.js
 
@@ -79,13 +80,16 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
 ```html
 <link href="/css/prism.css" media="screen, projection" rel="stylesheet" type="text/css">
 ```
-としても良く、僕はこちらを追記しました。あと見た目をいろいろ弄りました。なんかコードブロックに必ず無駄な一行が挿入されているんですが、理由が分かりません。分かる人がいたら教えてください。
-
+としても良く、僕はこちらを追記しました。このままだとデフォルトの設定と競合してしまうので色々コメントアウトして整えました。結構大変でした。
+```bash
+$ grep -r code
+```
+とかやって消したいスタイルや設定がある部分を探すとやりやすかったです。
 ### KaTeX
 
 このテーマはデフォルトで $\KaTeX$ 使ってるので問題ないです。
 
-### Ascii Doc
+### AsciiDoc
 
 こういう便利なものがあるらしくて、markdownくらい書きやすく、markdownより表現力が高いらしいです。まず[Asciidocによる文書作成環境の構築 [AFFRIT Portal]](https://itcweb.cc.affrc.go.jp/affrit/documents/guide/asciidoc/start)に従いAsciidoctorを入れてローカルに環境を構築します。あと`archetypes`ディレクトリにテンプレートを登録しとくと`hugo new ...`で新しく記事を作った時にコピーされるので設定します。Hugoは.adocファイルを扱うためにコマンドラインでasciidoctorを使うのですが、GitHub Actionsの環境にはこれが無いので、`gh-pages.yml`に以下のように追記します。
 ```yml
@@ -100,3 +104,7 @@ NOTEです。ほかにもいろいろ出来ます。ここら辺をうまく使�
 ====
 ```
 で`<div class="admonitionblock note">`で囲まれたブロックを作れるので、これをCSSとかでうまく弄れば綺麗に使えそうです。今は使う機会がないので、使う時に整えます。
+
+### 目次
+
+Web系の人はTOC(Table Of Contents)とも呼ぶらしいです。このテーマにはTOCを作ったり、サイドバーを配置したりする機能があるのでそれらを使っていい感じに配置しました。

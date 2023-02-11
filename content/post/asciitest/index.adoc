@@ -7,13 +7,13 @@ math:
 license: 
 hidden: false
 comments: true
-draft: false
+draft: true
 ---
 
 
 == 概要
 
-HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作っていたんですが、MathJaxが強制だったり(KaTeXを使いたい)選べるテーマが少なかったりする部分がイマイチだなぁと感じてました。あとこれは僕の技術力不足だと思うのですがWSL2を用いてプレビューしてたらminima以外のテーマを使うとエラーを吐かれたのでとりあえずminimaを使ってました。プラグイン周りの調べ物をしてたら「HUGO+GitHub Pagesでホームページを作った」みたいな記事を見つけ、「HUGO使えるの！？」となり、乗り換える事にしました。
+HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作っていたんですが、MathJaxが強制だったり(KaTeXを使いたい)選べるテーマが少なかったりする部分がイマイチだなぁと感じてました。あとこれは僕の技術力不足だと思うのですがWSL2を用いてプレビューする際minima以外のテーマを使うとエラーを吐かれたのでとりあえずminimaを使ってました。プラグイン周りの調べ物をしてたら「HUGO+GitHub Pagesでホームページを作った」みたいな記事を見つけ、「HUGO使えるの！？」となり、乗り換える事にしました。
 
 == Hugo+GitHub Pagesのやり方
 https://gohugo.io/hosting-and-deployment/hosting-on-github/[Host on GitHub | Hugo] に案内があるので、それに従って環境構築したりGitHub Actionsの設定をしたりしました。ただ、 `.github/workflows/gh-pages.yml` をそのままコピペしたらDeployのステップでpermission deniedと言われたので、 https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token[このページ] を参考に

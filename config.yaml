@@ -5,3 +5,10 @@ theme: 'hugo-theme-stack'
 security:
   exec:
     allow: "asciidoctor$"
+  
+params:
+  article:
+    toc: true
+  sidebar:
+    avatar:
+      enabled: true
