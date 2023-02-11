@@ -61,12 +61,10 @@ HUGOとGitHub Pagesを利用して作りました。最初はjekyllで作って�
 ```
 
 これを書き換えれば良さそなので`grep`でしらべたところ、`./themes/hugo-theme-stack/assets/scss/variables.scss`にあったのでこれを以下のように書き換えました。
-```diff-css
+```css
 :root {
     --sys-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue";
--    --zh-font-family: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
--    --base-font-family: "Lato", var(--sys-font-family), var(--zh-font-family), sans-serif;
-+    --base-font-family: "Lato", var(--sys-font-family), sans-serif;
+    --base-font-family: "Lato", var(--sys-font-family), sans-serif;
     --code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 ```
