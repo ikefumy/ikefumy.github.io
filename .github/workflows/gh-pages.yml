@@ -23,7 +23,7 @@ jobs:
           extended: true
 
       - name: Setup asciidoctor
-        uses: Analog-inc/asciidoctor-action
+        uses: Analog-inc/asciidoctor-action@v2
 
       - name: Build
         run: hugo --minify
