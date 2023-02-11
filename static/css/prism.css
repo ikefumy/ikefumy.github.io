@@ -220,7 +220,7 @@ div.code-toolbar {
   div.code-toolbar > .toolbar > .toolbar-item {
     float: right;
     display: inline-flex;
-    padding: 0.5em 0.2em;
+    /* padding: 0.5em 0.2em; */
   }
   div.code-toolbar > .toolbar > .toolbar-item > a {
     cursor: pointer;
