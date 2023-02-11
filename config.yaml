@@ -1,0 +1,7 @@
+baseURL: 'http://ikefumy.github.io/'
+languageCode: 'en-us'
+title: "ikefumy's memo"
+theme: 'hugo-theme-stack'
+security:
+  exec:
+    allow: "asciidoctor$"
