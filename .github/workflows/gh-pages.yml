@@ -22,9 +22,6 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Install asciidoctor
-        run: sudo apt-get install -y asciidoctor
-
       - name: Build
         run: hugo --minify
 
