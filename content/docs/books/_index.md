@@ -3,7 +3,7 @@ title: "参考書"
 weight: 3
 bookFlatSection: true
 bookToc: false
-bookHidden: false
+bookHidden: true
 # bookCollapseSection: false
 # bookComments: false
 # bookSearchExclude: false
