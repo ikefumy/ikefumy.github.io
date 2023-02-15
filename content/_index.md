@@ -8,29 +8,7 @@ weight: 1
 # bookComments: false
 # bookSearchExclude: false
 ---
-# 改善案
 
+# homeです
 
-## 案
-
-### Collapse
-CollapseSectionにおいて、▼だと分かりづらいので、`+-`を使用する。
-
-### home
-- `layouts\_default\home.html`をつくり、`content/_index.md`のfront matterで
-```yml
-type: home
-```
-とすることでhomeだけ特別なひょうじをする。
-
-### code block
-
-コードブロックとしてprism.jsを使うようにする。
-
-### サイドバー
-
-サイドバーの色を変える。色はまだ考えていない。
-
-### ヘッダー
-
-ヘッダーになんか加える
+まだなにも出来ていないです。そのうちhomeにはhome専用のページを用意します。
