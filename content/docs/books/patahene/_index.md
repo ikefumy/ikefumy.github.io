@@ -1,5 +1,5 @@
 ---
-title: "コンピュータの構成と設計 第6版(パタヘネ)"
+title: "パタヘネ 第6版"
 weight: 1
 # bookFlatSection: false
 # bookToc: true

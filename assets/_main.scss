@@ -77,8 +77,14 @@ html {
   }
   
   .container {
-    max-width: $container-max-width;
-    margin: 0 auto;
+    flex: 0 0 $container-max-width;
+    margin: 0 0;
+    @media screen and (max-width: $main-width) {
+        flex: 0 0 calc(100vw - #{$menu-width});
+        @media screen and(max-width: $mobile-breakpoint) {
+            flex: 0 0 100vw;
+        }
+    }
   }
   
   .book-icon {
@@ -97,15 +103,22 @@ html {
   }
   
   .book-menu {
-    flex: 0 0 $menu-width;
+    flex: 0 0 calc((100vw - #{$main-width}) / 2 + #{$menu-width});
     font-size: $font-size-14;
-  
     .book-menu-content {
-      width: $menu-width;
+      width: calc((100vw - #{$main-width}) / 2 + #{$menu-width});
       padding: $padding-16;
-      background: var(--body-background);
-  
+      padding-left: $padding-16;
+      background: var(--menu-background);
       @include fixed;
+    }
+
+    @media screen and(max-width: $main-width) {
+        flex: 0 0 $menu-width;
+        .book-menu-content {
+          width: $menu-width;
+          padding: $padding-16;
+        }
     }
   
     a,
@@ -128,11 +141,19 @@ html {
     }
   
     input.toggle + label::after {
-      content: "▸";
+      font-family: "Font Awesome 6 Free";
+      font-size:medium;
+      padding-left: 0.5em;
+      opacity: 0.5;
+      content: "\f0fe";
     }
-  
+    
     input.toggle:checked + label::after {
-      content: "▾";
+        content: "\f146";
+    }
+    
+    input.toggle + label:hover::after {
+        opacity: 1;
     }
   }
   
@@ -242,6 +263,11 @@ html {
       width: 1em;
     }
   
+    nav > ul {
+      padding: 1em;
+      border-left: 0.2em solid var(--menu-background);
+    }
+
     nav > ul > li:first-child {
       margin-top: 0;
     }
@@ -355,11 +381,16 @@ html {
   }
   
   // Extra space for big screens
-  @media screen and (min-width: $container-max-width) {
+  @media screen and (min-width: $main-width) {
     .book-page,
     .book-menu .book-menu-content,
     .book-toc .book-toc-content {
       padding: $padding-16 * 2 $padding-16;
+    }
+
+    .book-menu .book-menu-content {
+      padding: $padding-16 * 2 $padding-16;
+      padding-left: calc(#{$padding-16} + (100vw - #{$main-width}) / 2);
     }
   }
   
