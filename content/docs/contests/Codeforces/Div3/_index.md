@@ -1,5 +1,5 @@
 ---
-title: "Div3"
+title: "Div. 3"
 weight: 4
 # bookFlatSection: false
 # bookToc: true

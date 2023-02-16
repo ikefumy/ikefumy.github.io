@@ -1,13 +1,10 @@
 ---
-title: "#792"
-weight: 1
+title: "Div. 2, ECR"
+weight: 3
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
-# bookCollapseSection: false
+bookCollapseSection: true
 # bookComments: false
 # bookSearchExclude: false
-tags:
- - Div. 3
 ---
-# 参加記
