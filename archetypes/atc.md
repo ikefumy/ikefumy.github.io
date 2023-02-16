@@ -9,6 +9,7 @@ weight: 1
 # bookSearchExclude: false
 tags:
 - {{ substr .Name 0 3 }}
+- {{ .Name }}
 categories:
--　参加記
+- 参加記
 ---

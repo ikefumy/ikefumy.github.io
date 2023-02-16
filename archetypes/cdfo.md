@@ -8,7 +8,7 @@ weight: 1
 # bookComments: false
 # bookSearchExclude: false
 tags:
-- 
+- "#{{ .Name }}"
 categories:
 - 参加記
 ---
