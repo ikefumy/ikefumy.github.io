@@ -56,7 +56,7 @@
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;
@@ -158,7 +158,7 @@
 
   p > a::before {
     font-family: 'Font Awesome 6 Free';
-    content: "\f08e";
+    content: "\f0c1";
     font-weight: 900;
   }
 }
