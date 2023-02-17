@@ -1,5 +1,5 @@
 ---
-title: "#{{ .Name }}"
+title: "{{ .Name }}"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -8,7 +8,7 @@ weight: 1
 # bookComments: false
 # bookSearchExclude: false
 tags:
-- "#{{ .Name }}"
+- "{{ .Name }}"
 categories:
 - 参加記
 ---
