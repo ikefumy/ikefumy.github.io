@@ -9,6 +9,6 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-# homeです
+## homeです
 
 まだなにも出来ていないです。そのうちhomeにはhome専用のページを用意します。
