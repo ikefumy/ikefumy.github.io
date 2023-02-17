@@ -62,12 +62,13 @@ html {
   
     ul {
       padding-inline-start: $padding-16;
-      ul {
-        padding-inline-start: $padding-8;
-        border-inline-start: 0.15em solid var(--menu-sideline);
-        margin-inline-start: $padding-8;
-      }
     }
+  }
+
+  .book-menu nav ul ul ul {
+    padding-inline-start: $padding-8;
+    border-inline-start: 0.15em solid var(--menu-sideline);
+    margin-inline-start: $padding-8;
   }
   
   ul.pagination {
