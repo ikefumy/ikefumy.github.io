@@ -1,5 +1,5 @@
 <!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="参加記"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://ikefumy.github.io/categories/%E5%8F%82%E5%8A%A0%E8%A8%98/"><title>参加記 | ikefumy's memo</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.febf46975ffc53a091e0f61383453fd1dbd622d2aa89423bf1c1af7a7aa24e21.css integrity="sha256-/r9Gl1/8U6CR4PYTg0U/0dvWItKqiUI78cGvenqiTiE=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.3ea0975c25ca61a438d954752879825d33b202030d2f4cc74e9e4cb96bb2f2b7.js integrity="sha256-PqCXXCXKYaQ42VR1KHmCXTOyAgMNL0zHTp5MuWuy8rc=" crossorigin=anonymous></script>
+<script defer src=/en.search.min.af98d02584cfebdb2f81f699cda0b2c3e1bd1e4e55b436d3532337b5321486e7.js integrity="sha256-r5jQJYTP69svgfaZzaCyw+G9Hk5VtDbTUyM3tTIUhuc=" crossorigin=anonymous></script>
 <script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script>
 <link rel=alternate type=application/rss+xml href=https://ikefumy.github.io/categories/%E5%8F%82%E5%8A%A0%E8%A8%98/index.xml title="ikefumy's memo"><script src=https://kit.fontawesome.com/db7f3ba5e2.js crossorigin=anonymous></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPX83NKHS1"></script>
@@ -32,7 +32,7 @@
 B # 制約小さいからごり押し探索でもやるのかな？と思って考察してみたけど、これ $l_i=k$ を満たすような $i$ と $r_j=k$ を満たすような $j$ があればよくない？となり、提出してAC。あんまり制約小さいのが生きなかったので不安だったが、ひっかけみたいなもんだと思うことにした。
 C # 図の意味がよくわからなかったのでスルーした。おもったより難しくて焦った。前から見て行って「今どんな量の飲み物が残っているか」がうまく管理できればいいよねって感じがしたので、その方針を考えてみる。$i$ 番目の人について考えているとき、残っている飲み物それぞれから $b_i$ を引く必要があり、この処理で $0$ を下回る飲み物には特別な処理が必要になりそう。全体から同じ数引くのは無理なので下駄を履かせてpriority_queueで常勝！って感じになる。
 考察が終わってみると大典型だった。
-D # 今回の問題の中で一番素朴だと思った。うまく配置すれば各トライアングル内で2本の辺を使うことができる。このとき、赤2つ青1つのトライアングルが $n/6$ 個、赤1つ青2つのトライアングルが $n/6$ 個となるので塗り方は $\displaystyle \binom{n/3}{n/6}$ 通りとなる。トライアングル内の色の塗り方は
+D # 今回の問題の中で一番素朴だと思った。うまく配置すれば各トライアングル内で2本の辺を使うことができる。このとき、赤2つ青1つのトライアングルが $n/6$ 個、赤1つ青2つのトライアングルが $n/6$ 個となるのでトライアングルごとの塗り分け方は $\displaystyle \binom{n/3}{n/6}$ 通りとなる。トライアングル内の色の塗り方は
 すべて同じ重さ → 3通り 重さが2種類で重い方が2つ → 1通り 重さが2種類で軽い方が2つ → 2通り 重さが3種類 → 1通り となるので、あとは全部掛け合わせて終わり。
 D解き終わって問題一覧に戻るとEFGのAC人数がG > F > Eの順番になってて、どれから解けばいいんだ…？となった。とりあえずE開いたら問題文が長かったのでFG解いてる人は問題文長いから後回しにしたんだろうと考え、順番通りEを解くことにした。
 E # 読むのだるかったが読んだ。爆発に必要なマナが増えるほどbasic spellの詠唱回数が減るから三分探索でもすんのかな？って思った。三分探索するとしたら結局爆破する位置によってbasic spellを何回唱えるか数える必要があるからこっち先に考えるか～という気分になる。
