@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ECR143 on ikefumy's memo</title><link>https://ikefumy.github.io/tags/ECR143/</link><description>Recent content in ECR143 on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://ikefumy.github.io/tags/ECR143/index.xml" rel="self" type="application/rss+xml"/><item><title>ECR143</title><link>https://ikefumy.github.io/docs/contests/Codeforces/Div2+ECR/ECR143/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/contests/Codeforces/Div2+ECR/ECR143/</guid><description>結果 # 丁度キーボードが届いた日のコンテストだったので、US配列に慣れる良い機会だと思って参加した。
 思ったより出来たので満足。 EFあたりが「これマルチケースなんですか…？」って感じの問題で実装が結構苦しかった。
+コンテストのURL
 振り返り # A # 図があるな～と思いながら読んでた。一方の文字列の上から取った連続部分列をリバースして他方の文字列にくっつける操作しか出来ないことを確認して、sとtをリバースした物をくっつけてRR, BBの個数を数えた。もしも1つだけならそこで区切ればよいが、2つあったらどう分けても同じ色が隣接する部分が出てくるのでダメ。
 思ったよりスムーズに考察出来た気がしたがACまで6分強かかっててびっくりした。
 B # 制約小さいからごり押し探索でもやるのかな？と思って考察してみたけど、これ $l_i=k$ を満たすような $i$ と $r_j=k$ を満たすような $j$ があればよくない？となり、提出してAC。あんまり制約小さいのが生きなかったので不安だったが、ひっかけみたいなもんだと思うことにした。
