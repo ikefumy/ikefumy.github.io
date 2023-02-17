@@ -4,7 +4,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #ccc;
   background: 0 0;
-  font-family: var(--code-font-family);
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 1em;
   text-align: left;
   white-space: pre;
@@ -22,7 +22,7 @@ pre[class*="language-"] {
 }
 pre[class*="language-"] {
   padding: 1em;
-  margin: 0 0 0.5em 0;
+  margin: 0;
   overflow: auto;
 }
 :not(pre) > code[class*="language-"] {
@@ -203,7 +203,7 @@ div.code-toolbar {
     display: flex;
     flex-direction: column-reverse;
     margin: 0.5em 0;
-    border-radius: 7px 7px 7px 7px;
+    border-radius: 0.5rem;
     overflow: hidden;
   }
   div.code-toolbar > .toolbar {
@@ -266,11 +266,11 @@ div.code-toolbar {
     height: fit-content;
     color: white;
     margin: auto;
-    font-size: 0.1em;
+    font-size: 0.1rem;
     background: #dadada;
     background: rgba(224, 224, 224, 0.4);
     padding: 0 0.4em;
-    border-radius: 10px;
+    border-radius: 1rem;
   }
 
   div.code-toolbar > .toolbar > .toolbar-item > button > span {
