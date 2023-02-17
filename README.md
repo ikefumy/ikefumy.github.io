@@ -22,6 +22,9 @@ prism.jsのプラグインをうまく指定出来るようなshort codeを作�
 
 → GitHubとかTwitterのリンク？
 
+現在のページの状態を表示する。例えば`contests/Codeforces/div2+ECR/ECR143`にいるとしたら`contests > Codeforces > div2+ECR > ECR143`と表示する。
+長くなった時が心配。
+
 ## 見出し
 見出しを分かりやすくする
 下線を付けたり、横に線を出す(border-left)など。
