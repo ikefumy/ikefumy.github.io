@@ -1,5 +1,5 @@
-<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="ECR143"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://ikefumy.github.io/tags/ECR143/"><title>ECR143 | ikefumy's memo</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.59612b3e906e9e9c3069c3ffae3eb95ca23fd8d82d80a264ecce8fc5ef6e2595.css integrity="sha256-WWErPpBunpwwacP/rj65XKI/2NgtgKJk7M6Pxe9uJZU=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.95a4817643be02eb27ee5f85260a4f3d1cdec4236a725b3af57450b4d973ce18.js integrity="sha256-laSBdkO+Ausn7l+FJgpPPRzexCNqcls69XRQtNlzzhg=" crossorigin=anonymous></script>
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="ECR143"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://ikefumy.github.io/tags/ECR143/"><title>ECR143 | ikefumy's memo</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.195d729e45f86a8ffa599a5db73d906964da42bf85885ed010a8121210212a52.css integrity="sha256-GV1ynkX4ao/6WZpdtz2QaWTaQr+FiF7QEKgSEhAhKlI=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
+<script defer src=/en.search.min.d0020abe993d2aa8f24f6055f3309ef82c55e71ad983223c08b6436e642791ed.js integrity="sha256-0AIKvpk9KqjyT2BV8zCe+CxV5xrZgyI8CLZDbmQnke0=" crossorigin=anonymous></script>
 <script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script>
 <link rel=alternate type=application/rss+xml href=https://ikefumy.github.io/tags/ECR143/index.xml title="ikefumy's memo"><script src=https://kit.fontawesome.com/db7f3ba5e2.js crossorigin=anonymous></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPX83NKHS1"></script>
@@ -24,18 +24,25 @@
 <span>1</span></li></ul></li><li class=book-section-flat><strong>Tags</strong><ul><li class="flex justify-between"><a href=/tags/ECR/>ECR</a>
 <span>1</span></li><li class="flex justify-between"><a href=/tags/ECR143/>ECR143</a>
 <span>1</span></li></ul></li></ul></nav></aside></header><h1>ECR143</h1><article class="markdown book-post"><h2><a href=/docs/contests/Codeforces/Div2+ECR/ECR143/>ECR143</a></h2><div><a href=/categories/%E5%8F%82%E5%8A%A0%E8%A8%98/>参加記</a></div><div><a href=/tags/ECR143/>ECR143</a>,
-<a href=/tags/ECR/>ECR</a></div><p>結果 # 丁度キーボードが届いた日のコンテストだったので、US配列に慣れる良い機会だと思って参加した。
+<a href=/tags/ECR/>ECR</a></div><p>結果
+丁度キーボードが届いた日のコンテストだったので、US配列に慣れる良い機会だと思って参加した。
 思ったより出来たので満足。 EFあたりが「これマルチケースなんですか…？」って感じの問題で実装が結構苦しかった。
 コンテストのURL
-振り返り # A # 図があるな～と思いながら読んでた。一方の文字列の上から取った連続部分列をリバースして他方の文字列にくっつける操作しか出来ないことを確認して、sとtをリバースした物をくっつけてRR, BBの個数を数えた。もしも1つだけならそこで区切ればよいが、2つあったらどう分けても同じ色が隣接する部分が出てくるのでダメ。
+振り返り
+A
+図があるな～と思いながら読んでた。一方の文字列の上から取った連続部分列をリバースして他方の文字列にくっつける操作しか出来ないことを確認して、sとtをリバースした物をくっつけてRR, BBの個数を数えた。もしも1つだけならそこで区切ればよいが、2つあったらどう分けても同じ色が隣接する部分が出てくるのでダメ。
 思ったよりスムーズに考察出来た気がしたがACまで6分強かかっててびっくりした。
-B # 制約小さいからごり押し探索でもやるのかな？と思って考察してみたけど、これ $l_i=k$ を満たすような $i$ と $r_j=k$ を満たすような $j$ があればよくない？となり、提出してAC。あんまり制約小さいのが生きなかったので不安だったが、ひっかけみたいなもんだと思うことにした。
-C # 図の意味がよくわからなかったのでスルーした。おもったより難しくて焦った。前から見て行って「今どんな量の飲み物が残っているか」がうまく管理できればいいよねって感じがしたので、その方針を考えてみる。$i$ 番目の人について考えているとき、残っている飲み物それぞれから $b_i$ を引く必要があり、この処理で $0$ を下回る飲み物には特別な処理が必要になりそう。全体から同じ数引くのは無理なので下駄を履かせてpriority_queueで常勝！って感じになる。
+B
+制約小さいからごり押し探索でもやるのかな？と思って考察してみたけど、これ $l_i=k$ を満たすような $i$ と $r_j=k$ を満たすような $j$ があればよくない？となり、提出してAC。あんまり制約小さいのが生きなかったので不安だったが、ひっかけみたいなもんだと思うことにした。
+C
+図の意味がよくわからなかったのでスルーした。おもったより難しくて焦った。前から見て行って「今どんな量の飲み物が残っているか」がうまく管理できればいいよねって感じがしたので、その方針を考えてみる。$i$ 番目の人について考えているとき、残っている飲み物それぞれから $b_i$ を引く必要があり、この処理で $0$ を下回る飲み物には特別な処理が必要になりそう。全体から同じ数引くのは無理なので下駄を履かせてpriority_queueで常勝！って感じになる。
 考察が終わってみると大典型だった。
-D # 今回の問題の中で一番素朴だと思った。うまく配置すれば各トライアングル内で2本の辺を使うことができる。このとき、赤2つ青1つのトライアングルが $n/6$ 個、赤1つ青2つのトライアングルが $n/6$ 個となるのでトライアングルごとの塗り分け方は $\displaystyle \binom{n/3}{n/6}$ 通りとなる。トライアングル内の色の塗り方は
+D
+今回の問題の中で一番素朴だと思った。うまく配置すれば各トライアングル内で2本の辺を使うことができる。このとき、赤2つ青1つのトライアングルが $n/6$ 個、赤1つ青2つのトライアングルが $n/6$ 個となるのでトライアングルごとの塗り分け方は $\displaystyle \binom{n/3}{n/6}$ 通りとなる。トライアングル内の色の塗り方は
 すべて同じ重さ → 3通り 重さが2種類で重い方が2つ → 1通り 重さが2種類で軽い方が2つ → 2通り 重さが3種類 → 1通り となるので、あとは全部掛け合わせて終わり。
 D解き終わって問題一覧に戻るとEFGのAC人数がG > F > Eの順番になってて、どれから解けばいいんだ…？となった。とりあえずE開いたら問題文が長かったのでFG解いてる人は問題文長いから後回しにしたんだろうと考え、順番通りEを解くことにした。
-E # 読むのだるかったが読んだ。爆発に必要なマナが増えるほどbasic spellの詠唱回数が減るから三分探索でもすんのかな？って思った。三分探索するとしたら結局爆破する位置によってbasic spellを何回唱えるか数える必要があるからこっち先に考えるか～という気分になる。
+E
+読むのだるかったが読んだ。爆発に必要なマナが増えるほどbasic spellの詠唱回数が減るから三分探索でもすんのかな？って思った。三分探索するとしたら結局爆破する位置によってbasic spellを何回唱えるか数える必要があるからこっち先に考えるか～という気分になる。
 ある位置で爆破を起こした時、左を全消しするのに必要なマナと右を全消しするのに必要なマナが分かればよさそう。対称性があるので左を全消しにする場合だけ考える。昇順で見ていって $i$ 番目を考えているとき、「$i-1$番目を爆破したときに左を全消しするのに必要なコスト」からうまいこと計算出来ればいいなぁという気分になる。$h_{i-1} &lt; h_{i}$ のときはそのまま引き継げばよいが、そうでない時は少し面倒。$h_{i-1}$ を $h_{i} - 1$ まで削る必要がある。さらに、これによって $h_{i-2}$ が爆破できるかも変わってきてしまう。どうしましょう…ってなって途方に暮れる。よく考えるとヘルスの差がずっと1の区間は先頭が削られたら後続も同じ分だけ減らさないといけない。よってこの処理はまとめられる。つまり連続してる区間を保存しておいて順番に見ていけば良く、これをやるにはstackが都合がいい。計算量を考えると、$i$ 番目を見ているとき、区間 $[i, i]$が追加されたと考える。これを元にstackの先頭を見て、削る必要があればpopして削り現在の区間に加える。削らなくてよいなら終了。と処理すれば追加された区間たちは高々1回popするだけで、popしない場合は各処理で一回ずつなので償却で $O(N)$ となる。
 <a href=/docs/contests/Codeforces/Div2+ECR/ECR143/>...</a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css integrity=sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js integrity=sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js integrity=sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI crossorigin=anonymous onload=renderMathInElement(document.body)></script>
