@@ -17,8 +17,9 @@
     font-weight: normal;
     line-height: 1;
     padding: $padding-8;
-    border-left: 0.3rem solid var(--menu-sideline);
-    border-radius: 0.25rem;
+    // border-left: 0.3rem solid var(--menu-sideline);
+    // border-radius: 0.25rem;
+    border-bottom: 0.1rem solid lightgrey;
     margin-top: 1.5em;
     margin-bottom: $padding-16;
 
@@ -89,6 +90,21 @@
       margin-bottom: 0;
     }
   }
+
+blockquote > p {
+  ::before {
+    opacity: 0.5;
+    font-family: "Font Awesome 6 Free";
+    content: "\f10d\ ";
+    font-weight: 900;
+  }
+  ::after {
+    opacity: 0.5;
+    font-family: "Font Awesome 6 Free";
+    content: "\ \f10e";
+    font-weight: 900;
+  }
+}
 
   table {
     overflow: auto;
