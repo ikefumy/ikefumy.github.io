@@ -176,7 +176,10 @@ html {
   }
   
   .book-section-flat {
-    margin: $padding-16 * 2 0;
+    padding: $padding-16 0 0 0;
+    border-top: 0.1rem solid var(--menu-font-color);
+    margin: $padding-16 0;
+   //  margin: $padding-16 * 2 0;
   
     > a,
     > span,
