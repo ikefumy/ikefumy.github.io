@@ -1,5 +1,6 @@
 ---
-title: "ECR143"
+linktitle: "ECR143"
+title: "ECR143 参加記"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -9,7 +10,7 @@ weight: 1
 # bookSearchExclude: false
 tags:
 - ECR143
-- "ECR"
+- ECR
 categories:
 - 参加記
 ---
