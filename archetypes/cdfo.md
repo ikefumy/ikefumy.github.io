@@ -1,5 +1,6 @@
 ---
 title: "{{ .Name }}"
+linktitle: "{{ .Name }}"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -8,13 +9,16 @@ weight: 1
 # bookComments: false
 # bookSearchExclude: false
 tags:
-- "{{ .Name }}"
+- {{ .Name }}
+- # コンテストの種類を入力
 categories:
 - 参加記
 ---
 
-# 感想・結果
+# 結果
 
 # 振り返り
+
+# 感想
 
 # upsolve
