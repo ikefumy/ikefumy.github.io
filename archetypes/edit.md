@@ -9,6 +9,7 @@ weight: 1
 # bookComments: false
 # bookSearchExclude: false
 draft: true
+url: "docs/{{- now.Unix -}}"
 tags:
 - # 問題のタグ
 - # コンテストのタグ

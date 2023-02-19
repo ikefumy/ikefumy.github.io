@@ -1,5 +1,5 @@
 ---
-title: "{{ .Name }}"
+title: "ABC290"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -7,10 +7,10 @@ weight: 1
 # bookCollapseSection: false
 # bookComments: false
 # bookSearchExclude: false
-url: "docs/{{- now.Unix -}}"
+url: "docs/1676803816"
 tags:
-- {{ substr .Name 0 3 }}
-- {{ .Name }}
+- ABC
+- ABC290
 categories:
 - 参加記
 ---
