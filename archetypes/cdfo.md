@@ -8,6 +8,7 @@ weight: 1
 # bookCollapseSection: false
 # bookComments: false
 # bookSearchExclude: false
+url: "docs/{{- now.Unix -}}"
 tags:
 - {{ .Name }}
 - # コンテストの種類を入力

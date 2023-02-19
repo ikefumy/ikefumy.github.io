@@ -1,4 +1,5 @@
 ---
+linktitle: "{{ .Name }}"
 title: "{{ .Name }}"
 weight: 1
 # bookFlatSection: false
@@ -8,6 +9,7 @@ weight: 1
 # bookComments: false
 # bookSearchExclude: false
 draft: true
+url: "docs/{{- now.Unix -}}"
 tags:
 - 
 ---
