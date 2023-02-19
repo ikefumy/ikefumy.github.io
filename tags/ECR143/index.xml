@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ECR143 on ikefumy's memo</title><link>https://ikefumy.github.io/tags/ECR143/</link><description>Recent content in ECR143 on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://ikefumy.github.io/tags/ECR143/index.xml" rel="self" type="application/rss+xml"/><item><title>ECR413-E 解説</title><link>https://ikefumy.github.io/docs/editorial/Codeforces/Div2+ECR/ECR143/E/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/editorial/Codeforces/Div2+ECR/ECR143/E/</guid><description> 問題のURL
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ECR143 on ikefumy's memo</title><link>https://ikefumy.github.io/tags/ECR143/</link><description>Recent content in ECR143 on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://ikefumy.github.io/tags/ECR143/index.xml" rel="self" type="application/rss+xml"/><item><title>ECR413-E 解説</title><link>https://ikefumy.github.io/docs/1676803850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1676803850/</guid><description> 問題のURL
 問題概要
 解法
 コード
 Submission
-備考</description></item><item><title>ECR143 参加記</title><link>https://ikefumy.github.io/docs/contests/Codeforces/Div2+ECR/ECR143/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/contests/Codeforces/Div2+ECR/ECR143/</guid><description>結果
+備考</description></item><item><title>ECR143 参加記</title><link>https://ikefumy.github.io/docs/1676803810/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1676803810/</guid><description>結果
 丁度キーボードが届いた日のコンテストだったので、US配列に慣れる良い機会だと思って参加した。
 思ったより出来たので満足。 EFあたりが「これマルチケースなんですか…？」って感じの問題で実装が結構苦しかった。
 コンテストのURL
