@@ -1,6 +1,6 @@
 ---
-title: "{{ .Name }}"
 linktitle: "{{ .Name }}"
+title: "{{ .Name }}"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
