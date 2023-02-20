@@ -83,12 +83,13 @@ html {
   }
   
   .container {
+    display: flex;
     flex: 0 0 $container-max-width;
     margin: 0 0;
     @media screen and (max-width: $main-width) {
         flex: 0 0 calc(100vw - #{$menu-width});
         @media screen and(max-width: $mobile-breakpoint) {
-            flex: 0 0 100vw;
+            display: inline;
         }
     }
   }
@@ -343,6 +344,10 @@ html {
     .book-header {
       display: block;
     }
+
+    main.flex {
+      display: block;
+    }
   
     #menu-control:focus ~ main label[for="menu-control"] {
       @include outline;
@@ -359,6 +364,7 @@ html {
       }
   
       .book-page {
+        display: block;
         opacity: 0.25;
       }
   
