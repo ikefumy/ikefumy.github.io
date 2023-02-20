@@ -7,4 +7,5 @@ weight: 3
 bookCollapseSection: true
 # bookComments: false
 # bookSearchExclude: false
+sitemap_ignore: true
 ---
