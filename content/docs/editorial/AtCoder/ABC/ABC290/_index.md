@@ -1,15 +1,15 @@
 ---
-linktitle: "{{ .Name }}"
-title: "{{ .Name }}"
+linktitle: "ABC290"
+title: "ABC290"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
-# bookCollapseSection: false
+bookCollapseSection: true
 # bookComments: false
 # bookSearchExclude: false
-draft: true
-url: "docs/{{- now.Unix -}}"
+draft: false
+url: "docs/1676882634"
 tags:
 - 
 sitemap_ignore: true
