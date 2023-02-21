@@ -80,4 +80,4 @@ int main() {
 [Submission](https://atcoder.jp/contests/abc290/submissions/39064881)
 ## 備考
 
-[ABC290 参加記](../1676803816)
+[ABC290 参加記]({{< ref "/docs/contests/AtCoder/ABC/ABC290/_index.md" >}})
