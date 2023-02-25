@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>参加記 on ikefumy's memo</title><link>https://ikefumy.github.io/categories/%E5%8F%82%E5%8A%A0%E8%A8%98/</link><description>Recent content in 参加記 on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://ikefumy.github.io/categories/%E5%8F%82%E5%8A%A0%E8%A8%98/index.xml" rel="self" type="application/rss+xml"/><item><title>ABC290 参加記</title><link>https://ikefumy.github.io/docs/1676803816/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1676803816/</guid><description>結果
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>参加記 on ikefumy's memo</title><link>https://ikefumy.github.io/categories/%E5%8F%82%E5%8A%A0%E8%A8%98/</link><description>Recent content in 参加記 on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://ikefumy.github.io/categories/%E5%8F%82%E5%8A%A0%E8%A8%98/index.xml" rel="self" type="application/rss+xml"/><item><title>yukicoder contest 378 参加記</title><link>https://ikefumy.github.io/docs/1677308496/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1677308496/</guid><description>結果
+始めてyukicoderのコンテストに参加した。 7完で33位だった。ペナ9個もあってすごい。
+コンテストのURL
+振り返り
+A
+問題文の通り場合分けして実装するだけ。atoiを使おうとしてそのままstring型の変数入れたら怒られた。char *型しか許してくれないらしい。.c_strを使い事なきを得た。
+B
+これも問題文の通りに実装するだけ。愚直に書くと $O(HWK)$ だけど、制約が制約なので間に合う。
+C
+嘘生やしまくった。最初は先頭から愚直にマッチングしていってhelloworldを埋め込める場所を見つけたら残りの部分にaを埋め込めば良いと思ったが、WA。よく考えたら後ろからじゃね？と思い後ろからマッチングしてみたけどWA。もっとよく考えるともともとhelloworldが埋め込まれているのなら全ての?をaで置換するのが最適&amp;hellip;？と考えたがこれが嘘でまたWAが出たら流石に苦しいので愚直に全通り試してソートして一番小さいやつを出力した。
+D
+これは実装ミスでWAを生やしていた。横パンチの回数を固定して縦パンチの回数を二分探索すればよさそうなのは割とすぐわかって実装したらWAがでた。最初は考察が違うのかと思って考察し直そうとしたが、特にヤバそうな点がなかったので次に実装ミスを探すことにした。オーバーフローとか二分探索の上限下限当たりを調べたけど特に問題無さそうだった。ここでもう一回考察ミスを考えなおした。横パンチの回数は最大でも $H$ 回だと思ってたけど、そうでもなくて $H+W$ 回が上限やん、と気づき、書き直して提出したがまだWAだった。いよいよなんでWAなのか分からなくてしばらく絶望してた。
+何回も確認した末、制約を見誤ってることに気づいた。 $0 \leq K_A, K_B \leq HW$ なので $K_A, K_B$ は最大で $10^{12}$ になるんだけど、なぜか $10^6$ が最大だと思ってた。ここが原因でWAが出ていたのでそこを書き直してやっとACした。
+E
+AC数がFの方が多かったのでF解いてからEを解いた。手元で色々かいて良さげな方法を探した。途中から周期的な動きをしてくれると嬉しいな～と思いながら色々実験した結果、DDDRRRRUのあとは外周をクルクルまわる感じで対処出来る事に気が付いた。つまりUULL, LLDD, DDRR, RRUU, UULL, &amp;hellip;と繰り返せば良い。これをそのまま実装してACした。
+F
+これも誤読でめっちゃWAを生やした。まず条件式から「こんなん45度回転ですやん」って気持ちになる。制約を見間違え $HW \leq 2 \times 10^5$ だと思っていたので行方向に走査してセグ木で管理する感じか～となる。これ書いて提出したらMLEでて仰天した。とりあえずセグ木に投げるクエリの保存方法を変えたりセグ木ではなくFenwick treeを使ってみたり、mintではなくlong longを使ってみたりしたがすべてMLE。よくわかんなくなって結構絶望した。いろいろ考えた後制約見直したら$HW \leq 2 \times 10^5$ じゃなくて目を疑った。 $\max(HW, 2 \times 10 ^ 5)$ の部分でとなり合ってる要素を都合よく解釈してたのバカすぎて面白い。この制約でも上手い事やれば今の方針でいけるのかな～と思ってちょっと考えたけど、面倒なことになりそうだったので方針を変えた。宝の数が高々 $2 \times 10 ^ 5$ 個なので主客転倒してそれぞれの宝についてその宝をゲットできるマスの数を数え上げることにした。これは下図のようになる。</description></item><item><title>ABC290 参加記</title><link>https://ikefumy.github.io/docs/1676803816/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1676803816/</guid><description>結果
 US配列で参加する二回目のコンテスト。まだタイピングがおぼつかなくて、=を入力したかったのに_を入力してしまったり、*の位置が分からなくなったりする。 久々の三桁順位で萎えた。
 コンテストのURL
 振り返り
