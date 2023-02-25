@@ -1,6 +1,6 @@
 ---
 linktitle: "{{ .Name }}"
-title: "{{ .Name }} 参加記"
+title: "yukicoder contest {{ .Name }} 参加記"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -10,8 +10,7 @@ weight: 1
 # bookSearchExclude: false
 url: "docs/{{- now.Unix -}}"
 tags:
-- {{ .Name }}
-- # コンテストの種類を入力
+- yukicoder contest {{ .Name }}
 categories:
 - 参加記
 ---

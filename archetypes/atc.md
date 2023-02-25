@@ -1,6 +1,6 @@
 ---
-linktitle: "{{ .Name }} 参加記"
-title: "{{ .Name }}"
+linktitle: "{{ .Name }}"
+title: "{{ .Name }} 参加記"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
