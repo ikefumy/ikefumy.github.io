@@ -17,7 +17,7 @@ categories:
 
 ## 結果
 
-始めてyukicoderのコンテストに参加した。
+初めてyukicoderのコンテストに参加した。
 ![結果](result.png)
 7完で33位だった。ペナ9個もあってすごい。
 
