@@ -128,6 +128,10 @@
 //   }
 // }
 
+  .katex-display {
+    overflow-x: scroll
+  }
+
   table {
     overflow: auto;
     display: block;
