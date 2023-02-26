@@ -32,7 +32,15 @@ TOEFLの対策とABCどっちやるか迷ってABCやった。
 
 やる。`'A' <= c && c <= 'Z'`の部分はなにかしらのかたちでテンプレにぶち込んでいいのかなと思いながら実装してた。けどテンプレがでかくなりすぎるのが個人的にあんまり好きじゃないので悩む。
 
-([備考-A]({{% ref "#a-1" %}}))
+{{< details "追記: isupperについて" >}}
+twitterでdrogskolさんに`isupper`なる関数がstdに既に存在していることを教えてもらった。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://t.co/Dx8Y6fJVY8">https://t.co/Dx8Y6fJVY8</a><br>isupper は std にあります</p>&mdash; drogskol (@cureskol) <a href="https://twitter.com/cureskol/status/1629968639901470720?ref_src=twsrc%5Etfw">February 26, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+このほか`toupper`など様々な便利関数があるらしい([locale - cpprefjp C++日本語リファレンス](https://cpprefjp.github.io/reference/locale.html))。どこかの解説放送で`isdigit`関数だけ見たことがあり、それだけ知ってた。テンプレを膨らませなくて良くなったので嬉しい。
+
+{{< /details >}}
+
 ### B
 
 ソートして平均取る。こういうのかいてるとき`rep`マクロを整備しといて良かったって気分になる。
@@ -74,16 +82,3 @@ $O(N\log N)$ での重心分解の実装が思ってたよりも軽かったの�
 
 TLで畳み込みという情報だけ手に入れてupsolveした。
 [ABC196-F](https://atcoder.jp/contests/abc196/tasks/abc196_f)とほぼ同じ。言われてみればいかにも畳み込みっぽい形なので、典型とか関係なしに畳み込みの気分になるべきだったかもしれんと思った。畳み込みは次数の和が一定となる組合せの積の和をもとめるので、差分について求めるためにはどちらかの数列を反転してやればよい。あとは次数について $\pmod N$ を考えるように注意しながら数え上げてAC。実装自体は軽かった。
-
-## 備考
-
-### A
-[振り返り-A]({{% ref "#a" %}})で
-
-> `'A' <= c && c <= 'Z'` の部分はなにかしらのかたちでテンプレにぶち込んでいいのかな
-
-と書いたが、twitterでdrogskolさんに`isupper`なる関数がstdに既に存在していることを教えてもらった。
-
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://t.co/Dx8Y6fJVY8">https://t.co/Dx8Y6fJVY8</a><br>isupper は std にあります</p>&mdash; drogskol (@cureskol) <a href="https://twitter.com/cureskol/status/1629968639901470720?ref_src=twsrc%5Etfw">February 26, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-このほか`toupper`など様々な便利関数があるらしい([locale - cpprefjp C++日本語リファレンス](https://cpprefjp.github.io/reference/locale.html))。どこかの解説放送で`isdigit`関数だけ見たことがあり、それだけ知ってた。テンプレを膨らませなくて良くなったので嬉しい。
