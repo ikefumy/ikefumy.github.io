@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ABC on ikefumy's memo</title><link>https://ikefumy.github.io/tags/ABC/</link><description>Recent content in ABC on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://ikefumy.github.io/tags/ABC/index.xml" rel="self" type="application/rss+xml"/><item><title>ABC290 参加記</title><link>https://ikefumy.github.io/docs/1676803816/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1676803816/</guid><description>結果
-US配列で参加する二回目のコンテスト。まだタイピングがおぼつかなくて、=を入力したかったのに_を入力してしまったり、*の位置が分からなくなったりする。 久々の三桁順位で萎えた。
-コンテストのURL
-振り返り
-A
-やるだけ。指の体操
-B
-K-- &amp;gt; 0で判定すると楽な気がする。
-C
-最初は$A$をソートしたりuniqueしたりしようとしてたけど、set使った方が楽なのでそっちに変更して書いた。
-D
-予選仕様なだけあってちょっとむずい気がしたけどqual Aよりはマシな難易度してた気がする。qual AのDは解法思い浮かぶまで時間かかったけどこれはすぐ浮かんだので。問題文を理解するのにちょっと時間がかかったけど用は$D$ずつ飛び飛びで塗って、同じ所に戻ってきたらずれるだけか～とわかった。マス$0$を出発した後、次にマス$0$に到達する時を$x$回目だとすると、$x \times D \equiv 0 \pmod N$ が成り立つ。よって $x \times D = \operatorname{lcm}(D, N)$ となり、変形すると $x = N / \gcd(D, N)$ となる。よって答えは \(
-((K - 1) / x &amp;#43; ((K - 1) \% x) \times D) \% N
-\) となる。
-E
-思ったより面倒だった。$A_i$と$A_j(i&amp;lt;j)$ が対応するような連続部分列は $\min(i, N - j + 1)$ 個なのでこれを全力で数え上げるか&amp;hellip;という気分になる。$i \leq N - j + 1$ の場合と$i &amp;gt; N - j + 1$ の場合に分けて考える。</description></item><item><title>ABC291 参加記</title><link>https://ikefumy.github.io/docs/1677421396/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1677421396/</guid><description>結果
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ABC291 on ikefumy's memo</title><link>https://ikefumy.github.io/tags/ABC291/</link><description>Recent content in ABC291 on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://ikefumy.github.io/tags/ABC291/index.xml" rel="self" type="application/rss+xml"/><item><title>ABC291 参加記</title><link>https://ikefumy.github.io/docs/1677421396/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1677421396/</guid><description>結果
 TOEFLの対策とABCどっちやるか迷ってABCやった。
 苦しい結果になった。
 コンテストのURL
