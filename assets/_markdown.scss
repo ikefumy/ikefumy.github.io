@@ -113,20 +113,20 @@
     }
   }
 
-blockquote > p {
-  ::before {
-    opacity: 0.5;
-    font-family: "Font Awesome 6 Free";
-    content: "\f10d\ ";
-    font-weight: 900;
-  }
-  ::after {
-    opacity: 0.5;
-    font-family: "Font Awesome 6 Free";
-    content: "\ \f10e";
-    font-weight: 900;
-  }
-}
+// blockquote > p {
+//   ::before {
+//     opacity: 0.5;
+//     font-family: "Font Awesome 6 Free";
+//     content: "\f10d\ ";
+//     font-weight: 900;
+//   }
+//   ::after {
+//     opacity: 0.5;
+//     font-family: "Font Awesome 6 Free";
+//     content: "\ \f10e";
+//     font-weight: 900;
+//   }
+// }
 
   table {
     overflow: auto;
