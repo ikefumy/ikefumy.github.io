@@ -36,7 +36,10 @@ TOEFLの対策とABCどっちやるか迷ってABCやった。
 振り返り
 A
 やる。'A' &amp;lt;= c &amp;amp;&amp;amp; c &amp;lt;= 'Z'の部分はなにかしらのかたちでテンプレにぶち込んでいいのかなと思いながら実装してた。けどテンプレがでかくなりすぎるのが個人的にあんまり好きじゃないので悩む。
-( 備考-A)
+追記: isupperについて twitterでdrogskolさんにisupperなる関数がstdに既に存在していることを教えてもらった。
+https://t.co/Dx8Y6fJVY8
+isupper は std にあります
+&amp;mdash; drogskol (@cureskol) February 26, 2023 このほかtoupperなど様々な便利関数があるらしい( locale - cpprefjp C++日本語リファレンス)。どこかの解説放送でisdigit関数だけ見たことがあり、それだけ知ってた。テンプレを膨らませなくて良くなったので嬉しい。
 B
 ソートして平均取る。こういうのかいてるときrepマクロを整備しといて良かったって気分になる。
 C
@@ -51,10 +54,7 @@ F
 pre[i] &amp;amp;= 都市1から都市iまで移動するのに必要な最少のテレポート回数\\
 pos[i] &amp;amp;= 都市iから都市Nまで移動するのに必要な最少のテレポート回数
 \end{aligned}
-\] を求める。$pre[i]$ は配るDPで、$pos[i]$ は貰うDPで書けばいい。後は $i \rightarrow j$ のワープが存在するなら各 $k (i&amp;lt; k &amp;lt; j)$ に対して $ans[k] \leftarrow \min(ans[k], pre[i] + pos[j] + 1)$ と更新するようにすれば答えが求まる。これ書いて提出したらWAがでて謎すぎた。しばらく眺めてみると $pre, pos$ をint型でとっていた上1 &amp;lt;&amp;lt; 30で初期化してたせいで、どちらも1 &amp;lt;&amp;lt; 30の時にオーバーフローしてた。intからlong longに直したらACした。
-この時点でExがGよりも解かれててビックリした。とりあえずいつも通りG→Exの順番でやろうとしたら間違えてExから解いてた。
-G
-わからん。ビットごとに分けて考える。今考えてるビットの列を $a$, $b$ として、$a$ を $0, 1, 2, 3, &amp;hellip;$ とシフトさせたときのORの和をすぐに計算出来れば良さそう。$1$ の個数を考えるよりも$0$の個数を考えれば楽で、シフトした後の数列 $a^{\prime}$と数列 $b$ でどちらも $0$になっている要素の数が分かればよい。つまるところ、数列 $a, b$ それぞれの $0$ となっている要素のインデックスの差分を列挙、カウントすればいよい。どっかで見たことあるけど分からなかった。セグ木とか平方分割とか考えたけど全然できなかった。そもそも全シフトを試すのが違うのか？とか考えたけど、これ以外の方針も浮かばず、うんうん唸ってたらコンテストが終わってしまった。</description></item><item><title>ECR143 参加記</title><link>https://ikefumy.github.io/docs/1676803810/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1676803810/</guid><description>結果
+\] を求める。$pre[i]$ は配るDPで、$pos[i]$ は貰うDPで書けばいい。後は $i \rightarrow j$ のワープが存在するなら各 $k (i&amp;lt; k &amp;lt; j)$ に対して $ans[k] \leftarrow \min(ans[k], pre[i] + pos[j] + 1)$ と更新するようにすれば答えが求まる。これ書いて提出したらWAがでて謎すぎた。しばらく眺めてみると $pre, pos$ をint型でとっていた上1 &amp;lt;&amp;lt; 30で初期化してたせいで、どちらも1 &amp;lt;&amp;lt; 30の時にオーバーフローしてた。intからlong longに直したらACした。</description></item><item><title>ECR143 参加記</title><link>https://ikefumy.github.io/docs/1676803810/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1676803810/</guid><description>結果
 丁度キーボードが届いた日のコンテストだったので、US配列に慣れる良い機会だと思って参加した。
 思ったより出来たので満足。 EFあたりが「これマルチケースなんですか…？」って感じの問題で実装が結構苦しかった。
 コンテストのURL
