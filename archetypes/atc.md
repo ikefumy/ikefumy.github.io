@@ -18,7 +18,7 @@ categories:
 
 ## 結果
 
-[コンテストのURL](https://atcoder.jp/contests/abc290)
+[コンテストのURL]()
 
 ## 振り返り
 
