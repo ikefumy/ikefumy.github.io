@@ -18,6 +18,8 @@ categories:
 
 ## 結果
 
+![結果](result.png)
+
 [コンテストのURL]()
 
 ## 振り返り
