@@ -1,6 +1,6 @@
 ---
-linktitle: "#{{ .Name }}"
-title: "Codeforces #{{ .Name }} 参加記"
+linktitle: "ECR{{ .Name }}"
+title: "ECR{{ .Name }} 参加記"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -10,8 +10,8 @@ weight: 1
 # bookSearchExclude: false
 url: "docs/{{- now.Unix -}}"
 tags:
-- cdfo{{ .Name }}
-- # コンテストの種類を入力
+- ECR{{ .Name }}
+- ECR
 categories:
 - 参加記
 ---
