@@ -1,6 +1,6 @@
 ---
-linktitle: "ECR{{ .Name }}"
-title: "ECR{{ .Name }} 参加記"
+linktitle: "{{ .Name }}"
+title: "{{ .Name }} 参加記"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -10,7 +10,7 @@ weight: 1
 # bookSearchExclude: false
 url: "docs/{{- now.Unix -}}"
 tags:
-- ECR{{ .Name }}
+- {{ .Name }}
 - ECR
 categories:
 - 参加記
