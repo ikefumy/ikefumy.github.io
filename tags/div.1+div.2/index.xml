@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>div.1+div.2 on ikefumy's memo</title><link>https://ikefumy.github.io/tags/div.1+div.2/</link><description>Recent content in div.1+div.2 on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://ikefumy.github.io/tags/div.1+div.2/index.xml" rel="self" type="application/rss+xml"/><item><title>Codeforces #854 (Div.1 + Div. 2) 参加記</title><link>https://ikefumy.github.io/docs/1677520903/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1677520903/</guid><description>結果
+TOEFL iBTの対策をするかコンテストに参加するか迷って結局参加した。
+三時間かけてレートを36溶かすことができました。
+コンテストのURL
+振り返り
+A
+普通に実装するだけだった。
+B
+最初は $2$ をどうにかして作ってそれで全てを割ればいいんじゃないか？と思い、どうにか $2$ を作ろうと頑張るが、色々と場合分けが発生して大変だった。最初に最大と最少を持ってきて適宜交換しながら割っていく方法を試してみたが、出来ず、毎回最大最小持ってきてそれらが同じになるまで割れば良さそうなことに気付いた。計算量が $O(tn^2)$ だから間に合わないかもしれん、と思って別の手を考えようとしたが、何も浮かばなかったので諦めて先ほどの考察を実装したら爆速で通って謎だった。出力をミスってて1WAでたが、Wrong answer on pretest 1だったのでペナがつかなかった。
+今見返したら
+It is guaranteed, that the sum of $n$ for all test cases does not exceed $1000$ .
+って書いてあって、なるほどね、って感じがした。
+C
+むずすぎる。こんなん $a$ から順番に外側から並べて、文字の個数が奇数個の時はより大きい文字とペアにして、大きい方を手前、そうでない方を奥にして、余ったやつを小さいやつから前に貪欲に置いていけば終わり！と思って実装。Exampleいれて確認したら
+abb が
+bba になってた。これはどうしようかな&amp;hellip;と思い色々考えた。奇数個存在するアルファベットがある、かつ、文字列の長さが奇数なら真ん中にそいつおいて残りで同じことすればいいんじゃね？と思ったが、実装だるそうだしbbccaで死ぬ。色々考えて奇数個存在するアルファベットがあり、それより大きいアルファベットの種類数が $1$ 個なら奇数個のやつを真ん中おいてそれ以外を大きい方のアルファベットでうめる、そうでないなら先ほどの実装をすればよさそうと考え、これを実装して提出してAC。テストケースの丁寧さに助けられた。
+D1
+とりえあえず \[
+dp[(今の場所)][(1つ目のCPUの最後に実行したプログラム)][(1つ目のCPUの最後に実行したプログラム)]
+\] は計算量的にダメで、1つ手前のプログラムは必ずどちらかのCPUに使われるので次元が落せて、終わり！となり実装し始める。しかし「連続して同じプログラムを実行した場合最後の実行だけ $hot_i$ かかり、それ以外は $cold_i$ かかる」という問題だと勘違いしていたため、最後に実行したプログラムが $hot$ であったか否かを記録する次元も必要だと考え、 \[
+dp[(今の場所)][(i-1を実行していないCPUの最後に実行したプログラム)][i-1はhotで実行されたか][第二引数のプログラムはhotで実行されたか]
+\] みたいなDPを書いた。めっちゃ大変だったが、何とか書き上げ、サンプルを入れたら全然違くて絶望した。なぜか小さくなっているサンプルもあったのでマジで謎だったが、入力を間違えてた。僕は毎行 $cold_i, hot_i$ が与えられ、それが $n$ 行続くと思っていたが、実際は一行目に $cold$, 二行目に $hot$ が与えられていた。これを書き直してACやろ！と思ったけどまだダメ。サンプルを眺めると</description></item></channel></rss>
