@@ -49,4 +49,27 @@ $x$ が負の場合はとりあえず 右端を $i$ として、もしも $n-i \
 BでDP復元を書ききる前嘘に気付いたのは良かった。できれば書き始める前に嘘と気付きたい。Cみたいな問題、混乱するので $998244353$ とか書かないでほしい。答えが大きくなる可能性があるので～のとこ、嘘じゃないか？って思ったけどその値が大きいか大きくないかは悪魔でも主観なのでOK！みたいな理屈なのかもしれない。Dはめんどくさい実装をしてしまったので大分大変だった。今考えると累積minが欲しいのでセグ木いらない気がしてきた。upsolveのときに確認する。EはTLで全方位木DPと言われているのをみて、そっか～ってなった。全方位木なぜか考えてなかった。自分でも謎。Eを書いてる時「これ絶対めんどくさいしバグらせるだろ」って思いながら実装してたしもうちょっと考察するべきだった。FのAC数が0人のままおわったの怖すぎる。次のECRは2桁順位とりたい。
 
 ## upsolve
-そのうちやります。
+
+### E
+全方位木DPという情報を見た状態で取り組んだ。最初は二分探索+全方位木DPだと思ったが、よくよく考えると二分探索はいらない。根を決めたら深さ優先探索をしてそれぞれの部分木で
+
+1. 子から伸びているパスのうち、一番小さいやつを伸ばす
+2. 伸ばしたパス以外はそこで打ち切られたものとしてそれらの最小値を考える
+
+といった貪欲法で出来る。根を決めた場合の貪欲法が分かったので、あとはこれを全方位木DPでそれぞれを根とした場合を再現するだけ。思ったよりも実装が面倒になってしまった。全方位木DP、今から伝播させたい子ノードの情報を一旦差し引いて、残りの情報から伝播させる情報を計算して、データを戻す、ってのを繰り返す部分で毎回バグらせている気がする。
+
+今回は`multiset`内の要素のうち二番目に小さい物、という情報が欲しかったのだが、これ毎回以下のように書いてて
+```cpp
+multiset<int> st;
+// いろいろ挿入
+auto it = st.begin();
+it++;
+// *itで取得
+```
+値の取得まで含めると三行かかっていたのでめんどくさかった。これの楽な書き方をtwitterできいたらstoqさんとdrogskolさんから`*next(st.begin())`を使うと良い、と教えていただいた。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">*next(st.begin())だと1行で書けていいかもしれません</p>&mdash; stoq (@stoq_) <a href="https://twitter.com/stoq_/status/1630845693320630272?ref_src=twsrc%5Etfw">March 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">*next(st.begin()) とかでしょうか<br>第二引数を使えば k 番目にも O(k) で対応出来ます</p>&mdash; drogskol (@cureskol) <a href="https://twitter.com/cureskol/status/1630846062356463616?ref_src=twsrc%5Etfw">March 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+まさに求めていたものだったのでとてもありがたかった。ありがとうございます。
