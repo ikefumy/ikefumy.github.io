@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cdfo855 on ikefumy's memo</title><link>https://ikefumy.github.io/tags/cdfo855/</link><description>Recent content in cdfo855 on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://ikefumy.github.io/tags/cdfo855/index.xml" rel="self" type="application/rss+xml"/><item><title>Codeforces #855 参加記</title><link>https://ikefumy.github.io/docs/1677819673/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1677819673/</guid><description>
-結果
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cdfo855 on ikefumy's memo</title><link>https://ikefumy.github.io/tags/cdfo855/</link><description>Recent content in cdfo855 on ikefumy's memo</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://ikefumy.github.io/tags/cdfo855/index.xml" rel="self" type="application/rss+xml"/><item><title>Codeforces #855 参加記</title><link>https://ikefumy.github.io/docs/1677819673/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ikefumy.github.io/docs/1677819673/</guid><description>結果
 ペナ多すぎ。
 コンテストのURL
 振り返り
@@ -23,5 +22,4 @@ G
 ひとまずうまく探索する方法を考えたが、特に浮かばない。そういえば木のハッシュという物を聞いたことがあるな～と思い、検索したら この記事を見つけた。ロリハライブラリからハッシュ計算だけ抜き出してこれに書いてある通りに木のハッシュを実装し、根から順番に子のハッシュを列挙し、奇数個あるハッシュ値が0個ならその時点で終了。1個ならそのハッシュ値を持っている子のうちの1つに遷移、2個以上なら答えをNOとして終了、という実装をした。これを提出したらWAがでた。木のハッシュの実装ミスを疑い確認したが特にミスはない。いろいろテストケースを入れてたら以下のケースがYESと判定された。
 4 1 2 1 3 3 4 ハッシュを用いて対称かを判定する段階で「奇数個あるハッシュ値が2個以上」の部分の等号が抜けており、「奇数個あるハッシュの値が2個より多いとき」になっていた。これに等号をつけてAC。
 感想
-問題文が難読だった。あと思っていたより難しかったので焦った。この難易度でもケアレスミスでペナ出しまくったので若干悲しい。G問題で初めて木のハッシュの実装を知ったんだけど、これでちゃんとしたハッシュになるのすごくて感動した。暇なときにちゃんと勉強したい。
-upsolve</description></item></channel></rss>
+問題文が難読だった。あと思っていたより難しかったので焦った。この難易度でもケアレスミスでペナ出しまくったので若干悲しい。G問題で初めて木のハッシュの実装を知ったんだけど、これでちゃんとしたハッシュになるのすごくて感動した。暇なときにちゃんと勉強したい。</description></item></channel></rss>
