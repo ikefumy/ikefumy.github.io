@@ -1,6 +1,6 @@
 ---
 linktitle: "E"
-title: "ABC290-E 解説"
+title: "ABC290 : E - Make it Palindrome 解説"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
