@@ -8,6 +8,7 @@ weight: 1
 # bookCollapseSection: false
 # bookComments: false
 # bookSearchExclude: false
+editable: true
 draft: true
 url: "docs/1677917324"
 tags:
