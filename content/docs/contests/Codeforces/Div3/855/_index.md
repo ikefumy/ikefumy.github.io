@@ -1,6 +1,6 @@
 ---
 linktitle: "#855"
-title: "Codeforces #855 参加記"
+title: "Codeforces #855 (Div. 3) 参加記"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
