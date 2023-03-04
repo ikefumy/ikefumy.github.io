@@ -1,5 +1,6 @@
 ---
-title: "パタヘネ 第6版"
+linktitle: "解答"
+title: "解答"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -7,9 +8,11 @@ weight: 1
 bookCollapseSection: true
 # bookComments: false
 # bookSearchExclude: false
+draft: true
+url: "docs/1677919036"
 tags:
 - 
+sitemap_ignore: true
 ---
 
-## 概要
-ここにはにはコンピュータの構成と設計 第6版の僕の解答と実験記事を載せます。
+そのうち解いた問題の解答を置きます。
