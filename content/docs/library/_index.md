@@ -7,7 +7,7 @@ bookFlatSection: true
 # bookCollapseSection: false
 # bookComments: false
 # bookSearchExclude: false
-# draft: true
+draft: true
 tags:
 - 
 ---
