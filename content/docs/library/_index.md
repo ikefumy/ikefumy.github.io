@@ -17,4 +17,4 @@ tags:
 
 {{< button href="https://ikefumy.github.io/ikefumy-library" >}}ライブラリ (verify-helper版){{< /button >}}
 
-## ライブラリリスト
+## ライブラリ一覧

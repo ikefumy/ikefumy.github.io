@@ -8,6 +8,6 @@ bookToc: false
 # bookComments: false
 # bookSearchExclude: false
 ---
-# 解説
+## 概要
 
 ここでは面白いと思った問題の解説や、解説が難解だと感じた問題の自分なりの解釈書きます。
