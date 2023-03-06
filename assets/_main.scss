@@ -55,9 +55,13 @@ html {
     a {
       display: block;
     }
-  
-    a:hover {
+
+    ul a:hover {
       opacity: 0.5;
+    }
+  
+    > .book-section-flat > a:hover {
+      color: rgba($menu-title-color, 0.5);
     }
   
     ul {
@@ -135,11 +139,14 @@ html {
       word-wrap: break-word;
     }
   
-    a.active {
-      opacity: 0.5;
-      // color: var(--menu-color-link);
+    .book-section-flat > a.active {
+      color: rgba($menu-title-color, 0.5);
     }
-  
+
+    .book-section-flat > ul > li a.active {
+      opacity: 0.5;
+    }
+
     input.toggle + label + ul {
       display: none;
     }
@@ -177,15 +184,16 @@ html {
   }
   
   .book-section-flat {
-    padding: $padding-16 0 0 0;
-    border-top: 0.1rem solid var(--menu-font-color);
-    margin: $padding-16 0;
-   //  margin: $padding-16 * 2 0;
+    margin: $padding-16 * 2 0;
   
     > a,
     > span,
     > label {
+      color: $menu-title-color;
       font-weight: bolder;
+      padding: $padding-8;
+      border-radius: $padding-4;
+      background-color: var(--menu-title-background);
     }
   
     > ul {
