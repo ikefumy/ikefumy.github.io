@@ -1,4 +1,10 @@
 <ol class="breadcrumb">
     {{- template "breadcrumb" (dict "node" . "start" .) }}
 </ol>
+<p class="post-date">投稿日 :
+{{ if .Date }}
+    {{- .Date.Format "2006/01/02" }}
+{{ else }}
+    不明
+{{ end }}</p>
 <h1>{{ .Title }}</h1>
