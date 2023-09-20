@@ -1,6 +1,7 @@
 ---
 linktitle: "{{ .Name }}"
 title: "yukicoder contest {{ .Name }} 参加記"
+date: "{{ .Date }}"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
